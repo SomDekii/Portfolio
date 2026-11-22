@@ -39,22 +39,14 @@ document.querySelectorAll('dialog').forEach(dialog => {
   });
 });
 
-if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const observer = new IntersectionObserver(entries => entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('reveal');
-      observer.unobserve(entry.target);
-    }
-  }), { threshold: 0.08 });
-  document.querySelectorAll('.skill-card, .project-item').forEach(element => observer.observe(element));
-}
-
 // Use section positions so Home/About do not depend on observer callback order.
 const sectionLinks = [...navigation.querySelectorAll('a[href^="#"]')];
 const linkedSections = sectionLinks.map(link => ({
   link,
   section: document.getElementById(link.hash.slice(1))
-})).filter(item => item.section);
+})).filter(item => item.section).sort((a, b) =>
+  a.section.compareDocumentPosition(b.section) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1
+);
 const header = document.querySelector('.site-header');
 let navigationTarget = null;
 let scrollFrame = null;
@@ -147,4 +139,63 @@ contactForm.addEventListener('submit', event => {
   const body = String(data.get('message')).trim() + '\n\nFrom: ' + String(data.get('name')).trim() + '\nEmail: ' + String(data.get('email')).trim();
   document.getElementById('contact-form-status').textContent = 'Your email app will open a draft. Review it and send it there.';
   window.location.href = 'mailto:' + encodeURIComponent(recipient) + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+});
+
+const photoSliders = new Map();
+document.querySelectorAll('[data-photo-slider]').forEach(gallery => {
+  const slides = [...gallery.querySelectorAll('.moments-slide')];
+  const controls = gallery.querySelector('.moments-controls');
+  const position = gallery.querySelector('.moments-position');
+  let selectedSlide;
+
+  function showPhoto(step = 0) {
+    const available = slides.filter(slide => slide.querySelector('img'));
+    if (!available.length) return;
+    const current = Math.max(0, available.indexOf(selectedSlide));
+    const next = (current + step + available.length) % available.length;
+    selectedSlide = available[next];
+    slides.forEach(slide => { slide.hidden = slide !== selectedSlide; });
+    controls.hidden = available.length < 2;
+    position.textContent = (next + 1) + ' of ' + available.length;
+  }
+
+  photoSliders.set(gallery, showPhoto);
+  gallery.querySelectorAll('[data-slide-step]').forEach(button => {
+    button.addEventListener('click', () => showPhoto(Number(button.dataset.slideStep)));
+  });
+});
+
+document.querySelectorAll('[data-photo]').forEach(slot => {
+  const image = new Image();
+  image.alt = slot.dataset.photoAlt;
+  image.className = 'uploaded-photo';
+  image.addEventListener('load', () => {
+    const gallery = slot.closest('[data-photo-slider]');
+    slot.replaceWith(image);
+    photoSliders.get(gallery)?.();
+  }, { once: true });
+  image.src = slot.dataset.photo;
+});
+
+const themeToggle = document.querySelector('.theme-toggle');
+const themeColor = document.querySelector('meta[name="theme-color"]');
+
+function updateThemeToggle(light) {
+  themeToggle.setAttribute('aria-pressed', String(light));
+  themeToggle.title = light ? 'Switch to dark mode' : 'Switch to light mode';
+  themeColor.content = light ? '#faf7ff' : '#08090b';
+}
+
+updateThemeToggle(document.documentElement.dataset.theme === 'light');
+themeToggle.hidden = false;
+themeToggle.addEventListener('click', () => {
+  const light = document.documentElement.dataset.theme !== 'light';
+  const theme = light ? 'light' : 'dark';
+  document.documentElement.dataset.theme = theme;
+  updateThemeToggle(light);
+  try {
+    localStorage.setItem('portfolio-theme', theme);
+  } catch {
+    // The current theme still works when browser storage is unavailable.
+  }
 });

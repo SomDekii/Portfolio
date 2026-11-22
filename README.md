@@ -1,9 +1,25 @@
-# Sonam Deki - Portfolio
+# Sonam Deki ? Portfolio
 
-Computer Science student specializing in Blockchain and aspiring UX/UI designer.
+Portfolio for Sonam Deki, a blockchain developer and final-year Computer Science student. The site draws its content from `assets/cv.pdf`.
 
-Open index.html directly or use a local preview. Assets are intentionally empty. Placeholders record image paths in data-asset attributes. The disabled CV button expects assets/Sonam_Deki_CV.pdf.
+Open `index.html` in a browser. Download CV serves the PDF, and the contact form opens a draft in the visitor?s email app.
 
-Contact details, institution, study dates, and specific skills await Sonam's confirmation. Set data-email on #contact-form and enable its submit button after adding the correct email.
+## Portfolio photos
 
-Projects, experience, conferences, international exchange, community work, and credentials from the supplied ZIP remain for review; they are not claimed as Sonam's verified history.
+Add the images to `assets/` using these filenames. Each image replaces its own placeholder.
+
+| Upload | Filename |
+| --- | --- |
+| Home page portrait | `sonam-portrait.jpg` |
+| Show Me Your Agent Hackathon | `show-me-your-agent-hackathon.jpg` |
+| Blockchain Skills Bootcamp & Hackathon | `blockchain-bootcamp-hackathon.jpg` |
+| Best Project Award | `best-project-award.jpg` |
+| Aspire Institute Certificate of Completion | `aspire-institute.jpg` |
+| Bhutan Baccalaureate Diploma | `bhutan-baccalaureate.jpg` |
+| His Majesty the King's Certificate for Academic Excellence | `academic-excellence.jpg` |
+
+For **PRF 2026 Moments**, add `prf-2026-01.jpg`, `prf-2026-02.jpg`, and `prf-2026-03.jpg` to `assets/`.
+
+For **Hackathon Moments**, add `hackathon-01.jpg`, `hackathon-02.jpg`, and `hackathon-03.jpg` to `assets/`.
+
+For project screenshots, add `onchain-wallet-profiler.jpg`, `blockbuild.jpg`, `tasksphere.jpg`, `transparent-charity.jpg`, `museum-nft-marketplace.jpg`, `authentq.jpg` to `assets/`.

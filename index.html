@@ -3,12 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#F8F6FC">
-<meta name="description" content="Sonam Deki, Computer Science student specializing in Blockchain and aspiring UX/UI designer.">
-<title>Sonam Deki | Blockchain Student &amp; UX/UI Designer</title>
+<meta name="theme-color" content="#08090b">
+<meta name="description" content="Sonam Deki, blockchain developer and final-year Computer Science student in Thimphu, Bhutan.">
+<title>Sonam Deki | Blockchain Developer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:ital,wght@0,500;0,600;1,500&amp;family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+try {
+  if (localStorage.getItem('portfolio-theme') === 'light') {
+    document.documentElement.dataset.theme = 'light';
+    document.querySelector('meta[name="theme-color"]').content = '#faf7ff';
+  }
+} catch {}
+</script>
 <link rel="stylesheet" href="styles.css">
 <script src="app.js" defer>
 </script>
@@ -23,37 +31,38 @@
 <button class="menu-toggle" aria-expanded="false" aria-controls="main-navigation">Menu <span aria-hidden="true">&#9776;</span>
 </button>
 <nav id="main-navigation" aria-label="Main navigation">
-<a href="#home" aria-current="page">Home</a>
+<a href="#home" aria-current="location">Home</a>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#work">Projects</a>
 <a href="#contact">Contact</a>
 </nav>
-<button class="nav-resume" disabled title="Resume file to be added" data-resume-file="assets/Sonam_Deki_CV.pdf">Download CV &#8595;</button>
+<div class="header-actions">
+<button class="theme-toggle" type="button" aria-label="Light mode" aria-pressed="false" title="Switch to light mode" hidden><span aria-hidden="true">&#9789;</span></button>
+<a class="nav-resume" href="assets/cv.pdf" download>Download CV &#8595;</a>
+</div>
 </div>
 </header>
 <main id="main">
-<section id="home" class="hero wrap" aria-labelledby="hero-title">
+<section id="home" class="hero" aria-labelledby="hero-title">
+<div class="hero-inner wrap">
 <div class="hero-copy">
-<p class="availability">
-<span aria-hidden="true">
-</span>Open to opportunities</p>
-<h1 id="hero-title">Sonam <em>Deki</em>
-</h1>
-<p class="hero-role">COMPUTER SCIENCE STUDENT &middot; BLOCKCHAIN &middot; ASPIRING UX/UI DESIGNER</p>
-<p class="hero-tagline">Designing clear, human digital experiences<br>on top of solid technology.</p>
-<p class="hero-description">I'm Sonam Deki, a Computer Science student specializing in Blockchain and growing into UX/UI design. I'm interested in making complex digital systems easier to understand and use.</p>
-
+<p class="hero-name">Sonam Deki</p>
+<h1 id="hero-title">Blockchain <em>Developer</em></h1>
+<p class="hero-role">Cybersecurity</p>
+<p class="hero-tagline">I build blockchain applications and full-stack software.</p>
+<p class="hero-description">I&rsquo;m a final-year BSc Computer Science student at Gyalpozhing College of Information Technology, specializing in Blockchain Technology. My project work spans decentralized applications, smart contracts, and AI-powered tools.</p>
+<div class="hero-socials" aria-label="Professional links">
+<a href="https://www.linkedin.com/in/sonamdeki">LinkedIn</a>
+<a href="https://github.com/SomDekii">GitHub</a>
+</div>
 <div class="hero-actions">
-<a class="button primary" href="#work">View projects &#8599;</a>
-<a class="button secondary" href="#contact">Contact me</a>
+<a class="button primary" href="#work">Explore projects</a>
+<a class="button secondary" href="assets/cv.pdf" download>Download CV</a>
 </div>
 </div>
-<div class="profile-card">
-<figure class="hero-photo">
-<div class="asset-placeholder portrait-blank" data-asset="assets/CV.jpeg" aria-hidden="true">
-</div>
-</figure>
+<div class="hero-profile">
+<div class="hero-art"><div class="hero-portrait" data-photo="assets/sonam-portrait.jpg" data-photo-alt="Portrait of Sonam Deki"><span aria-hidden="true">SD</span></div></div>
 <dl class="profile-facts">
 <div>
 <dt>Studying</dt>
@@ -64,10 +73,11 @@
 <dd>Blockchain</dd>
 </div>
 <div>
-<dt>Elective</dt>
-<dd>Cyber Security</dd>
+<dt>Based in</dt>
+<dd>Thimphu, Bhutan</dd>
 </div>
 </dl>
+</div>
 </div>
 </section>
 <section id="about" aria-labelledby="about-title">
@@ -75,440 +85,230 @@
     <div class="about-grid">
       <div class="about-text">
         <p class="section-label">About Me</p>
-        <h2 class="section-title" id="about-title">Driven by curiosity,<br><em>grounded by purpose.</em></h2>
-        <p>I'm Sonam Deki, a Computer Science student specializing in Blockchain and an aspiring UX/UI designer.</p>
-        <p>I want to connect my technical studies with thoughtful interface design, making complex ideas feel clear and approachable.</p>
+        <h2 class="section-title" id="about-title">From smart contracts<br>to usable software.</h2>
+        <p>My experience includes software development, UI/UX design, and quality assurance through coursework, hackathons, and team projects.</p>
+        <p>My coursework includes modern database design, blockchain programming, decentralized applications and smart contracts, token development, and Hyperledger Fabric.</p>
       </div>
       <div class="about-details">
-        <div class="about-detail"><span class="about-detail-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11v6c4 3 8 3 12 0v-6M22 9v7"/></svg></span><div class="about-detail-content"><strong>Education</strong><span>Computer Science &middot; Blockchain specialization<br>Institution and study dates to be added</span></div></div>
-        <div class="about-detail"><span class="about-detail-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><div class="about-detail-content"><strong>Location</strong><span>To be added</span></div></div>
-        <div class="about-detail"><span class="about-detail-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V3h8v4M3 12h18M10 12v3h4v-3"/></svg></span><div class="about-detail-content"><strong>Focus Areas</strong><span>Blockchain &middot; UX/UI Design</span></div></div>
-        <div class="about-detail"><span class="about-detail-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18Z"/></svg></span><div class="about-detail-content"><strong>Languages</strong><span>To be added</span></div></div>
-        <div class="about-detail"><span class="about-detail-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></span><div class="about-detail-content"><strong>Email</strong><span>To be added</span></div></div>
+        <div class="about-detail"><span class="about-detail-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><div class="about-detail-content"><strong>Location</strong><span>Thimphu, Bhutan</span></div></div>
+        <div class="about-detail"><span class="about-detail-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V3h8v4M3 12h18M10 12v3h4v-3"/></svg></span><div class="about-detail-content"><strong>Focus Areas</strong><span>Blockchain development, cybersecurity, and UI/UX design</span></div></div>
+        <div class="about-detail"><span class="about-detail-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18Z"/></svg></span><div class="about-detail-content"><strong>Languages</strong><span>Dzongkha (native), Sharchop (mother tongue), and English (fluent)</span></div></div>
+        <div class="about-detail"><span class="about-detail-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></span><div class="about-detail-content"><strong>Email</strong><span><a href="mailto:somdekii840@gmail.com">somdekii840@gmail.com</a></span></div></div>
       </div>
     </div>
   </div>
 </section>
-<section id="skills"><div class="section-inner"><p class="section-label">Learning & Interests</p><h2 class="section-title">Skills</h2><p class="section-desc">My studies center on Blockchain, alongside a growing interest in UX/UI design. Specific tools and demonstrated skills will be added with my project work.</p><div class="skills-grid"><article class="skill-card"><h3>Blockchain</h3><p>My Computer Science specialization.</p><div class="skill-tags"><span>Academic focus</span></div></article><article class="skill-card"><h3>UX/UI Design</h3><p>My developing design direction: clear, approachable digital experiences.</p><div class="skill-tags"><span>Aspiring designer</span></div></article><article class="skill-card"><h3>Tools & Technical Skills</h3><p>To be added with supporting projects and coursework.</p><div class="skill-tags"><span>To be completed</span></div></article></div></div></section>
-<section id="work"><div class="section-inner"><p class="section-label">Featured Work</p><h2 class="section-title">Projects</h2><p class="section-desc">Interfaces and applications designed for real-world needs.</p><div class="projects-list"><article class="project-item" aria-labelledby="project-title-0"><div class="project-img"><div class="asset-placeholder" data-asset="assets/travel_diary.png" aria-hidden="true"></div></div><div class="project-content"><div class="project-number" aria-hidden="true">01</div><p class="project-role">UI/UX Designer &amp; Frontend Developer</p><h3 id="project-title-0">Travel Diary</h3><p>Travel Diary is a platform where travelers can capture, share,
-                and relive their adventures from around the world. From
-                breathtaking landscapes to unforgettable moments, users can post
-                their journeys, connect with fellow explorers, and inspire
-                others to discover new destinations — one journey at a time.</p><div class="project-buttons"><a href="https://www.figma.com/proto/M14a2xnhqpvAIxtzNE7SXy/BT-Page?node-id=132-70&t=9sZ0uHFVDraOkEbG-0&scaling=scale-down-width&content-scaling=fixed&page-id=132%3A2" target="_blank" rel="noopener noreferrer" class="design-btn">View Preview</a><button type="button" class="design-btn case-study-btn" data-case="0">Case Study</button></div></div></article>
-<article class="project-item reverse" aria-labelledby="project-title-1"><div class="project-img"><div class="asset-placeholder" data-asset="assets/bloodbank.png" aria-hidden="true"></div></div><div class="project-content"><div class="project-number" aria-hidden="true">02</div><p class="project-role">UI Designer &amp; Frontend Developer</p><h3 id="project-title-1">Blood Bank Management System</h3><p>A comprehensive healthcare platform managing Bhutan's blood
-                donation ecosystem — covering donor registration, real-time
-                inventory tracking, blood request processing, detailed
-                reporting, and multi-role notifications for donors, admins, and
-                healthcare providers.</p><div class="project-buttons"><a href="https://www.figma.com/proto/Nrdu45Bv31VJiCkSoakwqJ/Blood-Bank-management-system?node-id=8-8666&t=EbsedZxBPbaUZMbV-0&scaling=min-zoom&content-scaling=fixed&page-id=8%3A2&starting-point-node-id=164%3A7343" target="_blank" rel="noopener noreferrer" class="design-btn">View Preview</a><button type="button" class="design-btn case-study-btn" data-case="1">Case Study</button></div></div></article>
-<article class="project-item" aria-labelledby="project-title-2"><div class="project-img"><div class="asset-placeholder" data-asset="assets/brainScan.png" aria-hidden="true"></div></div><div class="project-content"><div class="project-number" aria-hidden="true">03</div><p class="project-role">UI/UX Designer</p><h3 id="project-title-2">Druk Brain Scan</h3><p>An AI-powered healthcare platform designed to assist brain
-                tumour detection using the VGG16 deep learning model. The
-                interface helps healthcare professionals upload scans, view
-                AI-generated predictions, and understand clinical results
-                easily.</p><div class="project-buttons"><a href="https://www.figma.com/proto/yrcPlJGgo2McWs8VVQLXNn/PRJ-202---Brain-Tumor-Recognition?node-id=83-194&t=RMazEb6fM8rHyHZd-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" target="_blank" rel="noopener noreferrer" class="design-btn">View Preview</a><button type="button" class="design-btn case-study-btn" data-case="2">Case Study</button></div></div></article>
-<article class="project-item reverse" aria-labelledby="project-title-3"><div class="project-img"><div class="asset-placeholder" data-asset="assets/GrabGo.png" aria-hidden="true"></div></div><div class="project-content"><div class="project-number" aria-hidden="true">04</div><p class="project-role">UI/UX Designer &amp; Frontend Developer</p><h3 id="project-title-3">Grab&GO</h3><p>A responsive takeaway food ordering web application that allows
-                users to browse menus, customize meals, place orders, and
-                receive instant confirmations through a clean and user-friendly
-                interface.</p><div class="project-buttons"><a href="https://www.figma.com/proto/BQmp8SrAP7O8Qyy1b8Pakv/Grab-and-go-group12-desktop?node-id=1505-3120&t=xnIJ8mthM6uukYgf-0&scaling=min-zoom&content-scaling=fixed&page-id=1505%3A3118" target="_blank" rel="noopener noreferrer" class="design-btn">View Preview</a><button type="button" class="design-btn case-study-btn" data-case="3">Case Study</button></div></div></article>
-<article class="project-item" aria-labelledby="project-title-4"><div class="project-img"><div class="asset-placeholder" data-asset="assets/kuensel.png" aria-hidden="true"></div></div><div class="project-content"><div class="project-number" aria-hidden="true">05</div><p class="project-role">UI/UX Designer</p><h3 id="project-title-4">Kuensel</h3><p>Kuensel is a digital news platform that delivers the latest
-                news, stories, and updates from Bhutan and around the world. It
-                provides reliable coverage on politics, business, culture,
-                technology, sports, and community events through a clean and
-                user-friendly reading experience.</p><div class="project-buttons"><a href="https://www.figma.com/proto/3shYVEBVuL0D7VN0mRvcni/Kuensel?node-id=1-609&t=bdA7CrAsbEKOA68x-0&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1" target="_blank" rel="noopener noreferrer" class="design-btn">View Preview</a><button type="button" class="design-btn case-study-btn" data-case="4">Case Study</button></div></div></article></div></div></section>
 <section id="experience">
 <div class="section-inner">
 <p class="section-label">Professional Background</p>
 <h2 class="section-title">Experience</h2>
-<p class="section-desc">
-          Internships where I applied AI, design, and data skills to real
-          organisational challenges.
-        </p>
-<div class="exp-cols">
-<div>
-<div class="timeline">
-<div class="timeline-item">
-<p class="timeline-period">January 2026</p>
-<h3>Intern — Network &amp; IT Operations</h3>
-<p class="timeline-org">Bhutan Telecom Limited, Thimphu</p>
-<ul>
-<li>
-                    Rotated through CANS, NNOC, and RAN departments gaining
-                    broad national telecom exposure
-                  </li>
-<li>
-                    Developed hands-on knowledge in GPON systems and last-mile
-                    internet connectivity
-                  </li>
-<li>
-                    Supported customer connectivity and enterprise Wi-Fi
-                    solutions
-                  </li>
-</ul>
+<p class="section-desc">Event support, developer training, and student leadership.</p>
+<div class="exp-cols"><div><div class="timeline">
+<div class="timeline-item"><p class="timeline-period">September 2026</p><h3>PRF 2026</h3><p class="timeline-org">GovTech &middot; Le M&eacute;ridien, Paro</p><ul><li>Supported the protocol team with delegate registration, guest guidance, VIP coordination, and on-site logistics.</li></ul>
 </div>
-<div class="timeline-item">
-<p class="timeline-period">July 2025</p>
-<h3>Intern — AI &amp; Language Technology</h3>
-<p class="timeline-org">GovTech Bhutan, Thimphu</p>
-<ul>
-<li>
-                    Integrated Dzongkha NLP models for translation, speech
-                    recognition, and text-to-speech
-                  </li>
-<li>
-                    Built a responsive frontend with HTML, CSS, JavaScript, and
-                    REST APIs
-                  </li>
-<li>
-                    Implemented file support features for PDF and TXT formats
-                  </li>
-</ul>
-</div>
-<div class="timeline-item">
-<p class="timeline-period">June – July 2024</p>
-<h3>Intern — AI &amp; Data Visualisation</h3>
-<p class="timeline-org">Yangkor Private Limited, Thimphu</p>
-<ul>
-<li>
-                    Collaborated with development teams on AI and data
-                    visualisation projects
-                  </li>
-<li>
-                    Created Power BI dashboards and reports using eCMS data
-                  </li>
-<li>
-                    Gained experience in real-world project workflows and agile
-                    practices
-                  </li>
-</ul>
-</div>
-</div>
-</div>
-<div>
-<div class="timeline">
-<div class="timeline-item">
-<p class="timeline-period">Feb – June 2025</p>
-<h3>PRJ 301 Team Lead</h3>
-<p class="timeline-org">Gyalpozhing College of IT</p>
-<ul>
-<li>
-                    Led a team of five through full project lifecycle of Jangkha
-                    AI app
-                  </li>
-<li>
-                    Managed timelines, facilitated design sprints, and bridged
-                    AI and frontend teams
-                  </li>
-<li>
-                    Strengthened collaboration, project management, and
-                    leadership skills
-                  </li>
-</ul>
-</div>
-<div class="timeline-item">
-<p class="timeline-period">Aug 2023 – June 2024</p>
-<h3>Treasurer (EXCO) — DevForge Club</h3>
-<p class="timeline-org">Gyalpozhing College of IT</p>
-<ul>
-<li>
-                    Maintained accurate budget records and tracked financial
-                    transactions
-                  </li>
-<li>
-                    Monitored member attendance and club activity engagement
-                  </li>
-<li>
-                    Ensured transparency and accountability in all financial
-                    matters
-                  </li>
-</ul>
-</div>
-<div class="timeline-item">
-<p class="timeline-period">Feb – June 2023</p>
-<h3>Class Representative</h3>
-<p class="timeline-org">Gyalpozhing College of IT</p>
-<ul>
-<li>Acted as liaison between students and faculty</li>
-<li>
-                    Coordinated academic activities and conveyed important
-                    announcements
-                  </li>
-</ul>
-</div>
-</div>
-</div>
-</div>
+<div class="timeline-item"><p class="timeline-period">September 19&ndash;October 1, 2025</p><h3>Sui Developer Workshop &ndash; Bhutan</h3><p class="timeline-org">Gyalpozhing College of Information Technology and DHI</p><ul><li>Participated in the workshop at the Kabisa campus in Thimphu.</li></ul></div>
+</div></div><div><div class="timeline">
+<div class="timeline-item"><p class="timeline-period">2026&ndash;2027</p><h3>Rovers Club Vice President</h3><p class="timeline-org">Gyalpozhing College of Information Technology &middot; Royal University of Bhutan</p><ul><li>Helps coordinate club activities and liaises between the club advisor and members.</li></ul></div>
+<div class="timeline-item"><p class="timeline-period">2024</p><h3>Leadership Training Programme</h3><p class="timeline-org">Aspire Institute &middot; Online</p><ul><li>Completed all three modules covering leadership, communication, teamwork, and problem-solving.</li></ul></div>
+</div></div></div>
 </div>
 </section>
-<section id="conferences">
+<section id="prf-moments" aria-labelledby="prf-moments-title">
 <div class="section-inner">
-<p class="section-label">Events &amp; Learning</p>
-<h2 class="section-title">Conferences &amp; Workshops</h2>
-<p class="section-desc">
-          Actively engaging with the global AI and tech community through
-          conferences, workshops, and innovation programmes.
-        </p>
-<div class="conf-grid">
-<div class="conf-card">
-<p class="conf-year">Nov 2025 · Thimphu, Bhutan</p>
-<h4>3rd Australia-Bhutan Research Conference (ABRC 2025)</h4>
-<div class="conf-img">
-<div class="asset-placeholder " data-asset="assets/ABRC.png" aria-hidden="true">
+<h2 class="section-title" id="prf-moments-title">PRF 2026 Moments</h2>
+<p class="section-desc">September 2026 &middot; Le M&eacute;ridien, Paro</p>
+<div class="moments-gallery" data-photo-slider role="group" aria-label="PRF photo slider">
+<div class="moments-frame" id="prf-photo-frame">
+<div class="moments-slide"><div class="asset-placeholder" data-photo="assets/prf-2026-01.jpg" data-photo-alt="PRF 2026 in Paro, photo 1" aria-hidden="true"></div></div>
+<div class="moments-slide" hidden><div class="asset-placeholder" data-photo="assets/prf-2026-02.jpg" data-photo-alt="PRF 2026 in Paro, photo 2" aria-hidden="true"></div></div>
+<div class="moments-slide" hidden><div class="asset-placeholder" data-photo="assets/prf-2026-03.jpg" data-photo-alt="PRF 2026 in Paro, photo 3" aria-hidden="true"></div></div>
 </div>
-</div>
-<p>
-              Attended 3 full days of the ABRC 2025 — "Bridging Knowledge,
-              Innovation, and Policy: Harnessing the Power of Research."
-              Organised jointly by the Royal University of Bhutan and the Royal
-              Bhutanese Embassy of Canberra with Australian Government support.
-            </p>
-</div>
-<div class="conf-card">
-<p class="conf-year">July 16, 2025 · Thimphu, Bhutan</p>
-<h4>AI for Development Workshop</h4>
-<div class="conf-img">
-<div class="asset-placeholder " data-asset="assets/AIforDev.png" aria-hidden="true">
-</div>
-</div>
-<p>
-              Attended Day 2 of the high-level AI for Development Workshop
-              hosted by the Royal Government of Bhutan, UAE, G42, Eurasia Group,
-              and GovTech — featuring discussions on Bhutan's development goals
-              and AI integration strategies.
-            </p>
-</div>
-<div class="conf-card">
-<p class="conf-year">May 28, 2025 · Thimphu, Bhutan</p>
-<h4>Bhutan Launch — Human Development Report 2025</h4>
-<div class="conf-img">
-<div class="asset-placeholder " data-asset="assets/HumanDev.png" aria-hidden="true">
-</div>
-</div>
-<p>
-              Attended the national Bhutan launch of the UNDP Human Development
-              Report 2025: "A matter of choice: People and possibilities in the
-              age of AI" — exploring AI's impact on human development and the
-              future of work.
-            </p>
-</div>
-<div class="conf-card">
-<p class="conf-year">March 2025 · Bhutan</p>
-<h4>National Startup Weekend</h4>
-<div class="conf-img">
-<div class="asset-placeholder " data-asset="assets/NSW.jpeg" aria-hidden="true">
-</div>
-</div>
-<p>
-              Participated in the National Startup Weekend under the theme
-              "Cultivating Conscious Innovation: Merging Emerging Technologies
-              with Mindful Development Practices" — pitching and developing an
-              innovative startup concept with a cross-functional team.
-            </p>
+<div class="moments-controls" hidden>
+<button type="button" class="design-btn" data-slide-step="-1" aria-controls="prf-photo-frame">Previous</button>
+<span class="moments-position" aria-live="polite"></span>
+<button type="button" class="design-btn" data-slide-step="1" aria-controls="prf-photo-frame">Next</button>
 </div>
 </div>
 </div>
 </section>
-<section id="international">
+<section id="work">
 <div class="section-inner">
-<p class="section-label">Global Exposure</p>
-<h2 class="section-title">International Experience</h2>
-<p class="section-desc">
-          Cross-border learning and collaboration that shaped a global
-          perspective on technology, entrepreneurship, and design.
-        </p>
-<div class="intl-grid">
-<div>
-<div class="intl-image-wrapper">
-<div class="asset-placeholder " data-asset="assets/Singapore.jpg" aria-hidden="true">
+<p class="section-label">Featured Work</p>
+<h2 class="section-title">Projects</h2>
+<p class="section-desc">Blockchain and software projects from coursework and team collaborations.</p>
+<div class="projects-list">
+<article class="project-item" aria-labelledby="project-title-0">
+<div class="project-img"><div class="asset-placeholder" data-photo="assets/onchain-wallet-profiler.jpg" data-photo-alt="Project screenshot" aria-hidden="true"></div></div>
+<div class="project-content">
+<div class="project-number" aria-hidden="true">01</div>
+<p class="project-role">Documentation &amp; Quality Assurance &middot; Ongoing</p>
+<h3 id="project-title-0">Onchain Wallet Profiler</h3>
+<p>Ethereum wallet profiling platform that uses the Nansen API to analyze transactions, fund flows, trading patterns, and protocol interactions.</p>
+<div class="project-buttons"><button type="button" class="design-btn case-study-btn" data-case="0">Case Study</button></div>
 </div>
+</article>
+<article class="project-item reverse" aria-labelledby="project-title-1">
+<div class="project-img"><div class="asset-placeholder" data-photo="assets/blockbuild.jpg" data-photo-alt="Project screenshot" aria-hidden="true"></div></div>
+<div class="project-content">
+<div class="project-number" aria-hidden="true">02</div>
+<p class="project-role">Documentation &amp; UI/UX Design &middot; April 2026</p>
+<h3 id="project-title-1">BlockBuild</h3>
+<p>2D multiplayer blockchain game that uses Solidity smart contracts, ERC-20 tokens, and ERC-1155 NFTs for virtual land ownership and asset trading.</p>
+<div class="project-buttons"><button type="button" class="design-btn case-study-btn" data-case="1">Case Study</button></div>
 </div>
+</article>
+<article class="project-item" aria-labelledby="project-title-2">
+<div class="project-img"><div class="asset-placeholder" data-photo="assets/tasksphere.jpg" data-photo-alt="Project screenshot" aria-hidden="true"></div></div>
+<div class="project-content">
+<div class="project-number" aria-hidden="true">03</div>
+<p class="project-role">Full-Stack Developer &middot; March 2026</p>
+<h3 id="project-title-2">TaskSphere</h3>
+<p>Task management app built with Spring Boot, MongoDB, and React/Vite, with JWT authentication and real-time updates via Server-Sent Events.</p>
+<div class="project-buttons"><button type="button" class="design-btn case-study-btn" data-case="2">Case Study</button></div>
 </div>
-<div class="intl-items">
-<div class="intl-item">
-<span class="intl-flag">
-</span>
-<div>
-<strong
-                  >GCIT SPARK — Nanyang Polytechnic, Singapore (Nov
-                  2025)</strong
-                >
-<span>
-                  Selected for a week-long immersive exchange at NYP — Bhutan's
-                  first overseas programme of this kind. Attended Business
-                  Innovation &amp; Entrepreneurship class and engaged with
-                  international student peers.
-                </span>
+</article>
+<article class="project-item reverse" aria-labelledby="project-title-3">
+<div class="project-img"><div class="asset-placeholder" data-photo="assets/transparent-charity.jpg" data-photo-alt="Project screenshot" aria-hidden="true"></div></div>
+<div class="project-content">
+<div class="project-number" aria-hidden="true">04</div>
+<p class="project-role">Blockchain Developer &middot; October 2025</p>
+<h3 id="project-title-3">Transparent Charity Donation System</h3>
+<p>Hyperledger Fabric system that tracks charitable donations from submission to distribution.</p>
+<div class="project-buttons"><button type="button" class="design-btn case-study-btn" data-case="3">Case Study</button></div>
 </div>
+</article>
+<article class="project-item" aria-labelledby="project-title-4">
+<div class="project-img"><div class="asset-placeholder" data-photo="assets/museum-nft-marketplace.jpg" data-photo-alt="Project screenshot" aria-hidden="true"></div></div>
+<div class="project-content">
+<div class="project-number" aria-hidden="true">05</div>
+<p class="project-role">Frontend &amp; Smart Contract Developer &middot; August 2025</p>
+<h3 id="project-title-4">Bhutanese Museum NFT Marketplace (BMM)</h3>
+<p>Ethereum NFT marketplace for Bhutanese cultural artifacts built with Solidity, ERC-721, React, and Ethers.js.</p>
+<div class="project-buttons"><button type="button" class="design-btn case-study-btn" data-case="4">Case Study</button></div>
 </div>
-<div class="intl-item">
-<span class="intl-flag">
-</span>
-<div>
-<strong>SQREEM Technologies — AI &amp; Big Data</strong>
-<span>
-                  Company visit to SQREEM Technologies, gaining insights into
-                  large-scale AI applications for human behaviour analysis and
-                  digital intelligence.
-                </span>
+</article>
+<article class="project-item reverse" aria-labelledby="project-title-5">
+<div class="project-img"><div class="asset-placeholder" data-photo="assets/authentq.jpg" data-photo-alt="Project screenshot" aria-hidden="true"></div></div>
+<div class="project-content">
+<div class="project-number" aria-hidden="true">06</div>
+<p class="project-role">Documentation &amp; Frontend Developer &middot; August 2025</p>
+<h3 id="project-title-5">AuthenTQ</h3>
+<p>Blockchain traceability system that uses smart contracts and NFT batch registration to verify Cordyceps authenticity.</p>
+<div class="project-buttons"><button type="button" class="design-btn case-study-btn" data-case="5">Case Study</button></div>
 </div>
-</div>
-<div class="intl-item">
-<span class="intl-flag">
-</span>
-<div>
-<strong>A*STAR Research Institute</strong>
-<span>
-                  Visited A*STAR, Singapore's leading public research
-                  institution, exploring real-world research and innovation
-                  across advanced manufacturing, biomedical, and digital
-                  domains.
-                </span>
-</div>
-</div>
-<div class="intl-item">
-<span class="intl-flag">
-</span>
-<div>
-<strong>Cultural Exchange &amp; Global Network</strong>
-<span>
-                  Built lasting international friendships and professional
-                  connections with NYP students, broadening perspective on
-                  global collaboration and technology entrepreneurship.
-                </span>
-</div>
-</div>
-</div>
+</article>
 </div>
 </div>
 </section>
-<section id="tedx">
+<section id="skills" aria-labelledby="skills-title">
 <div class="section-inner">
-<p class="section-label">Community Leadership</p>
-<h2 class="section-title">TEDxThimphu</h2>
-<p class="section-desc">
-          Contributing to Bhutan's growing culture of ideas, innovation, and
-          public discourse.
-        </p>
-<div class="tedx-inner">
-<div class="tedx-image">
-<div class="asset-placeholder " data-asset="assets/TEDx.jpeg" aria-hidden="true">
-</div>
-</div>
-<div class="tedx-details">
-<div class="tedx-detail">
-<strong>Role · March 2026</strong>
-<p>
-                Volunteer — contributed to event logistics, speaker
-                coordination, and ensuring a seamless experience for attendees
-                at TEDxThimphu, Bhutan's premier ideas conference.
-              </p>
-</div>
-<div class="tedx-detail">
-<strong>Impact</strong>
-<p>
-                Helped platform diverse Bhutanese voices and international
-                speakers, fostering dialogue on technology, culture,
-                sustainability, and education.
-              </p>
-</div>
-<div class="tedx-detail">
-<strong>Community</strong>
-<p>
-                Part of a volunteer team committed to making TEDxThimphu a
-                meaningful gathering for Bhutan's emerging generation of
-                thinkers, entrepreneurs, and changemakers.
-              </p>
-</div>
-</div>
+<p class="section-label">Technical &amp; Professional Skills</p>
+<h2 class="section-title" id="skills-title">Skills</h2>
+<p class="section-desc">Tools and skills I use in blockchain, cybersecurity, software development, and design.</p>
+<div class="skills-grid">
+<article class="skill-card"><h3>Blockchain &amp; Cybersecurity</h3><p>Ethereum development, on-chain analytics, and network security.</p><div class="skill-tags"><span>Ethereum</span><span>EVM</span><span>Smart contracts</span><span>Web3</span><span>ERC standards</span><span>On-chain analytics</span><span>DApps</span><span>Alchemy</span><span>Nansen API</span><span>Etherscan</span><span>MetaMask</span><span>Remix IDE</span><span>Hardhat</span><span>Nmap</span><span>Wireshark</span><span>CTF practice</span></div></article>
+<article class="skill-card"><h3>Software Development &amp; Design</h3><p>Programming languages, frameworks, databases, and tools I use to build software.</p><div class="skill-tags"><span>Python</span><span>JavaScript</span><span>Java</span><span>SQL</span><span>Solidity</span><span>PyTorch</span><span>React</span><span>Node.js</span><span>HTML</span><span>CSS</span><span>TypeScript</span><span>Tailwind CSS</span><span>Git</span><span>GitLab</span><span>GitHub</span><span>Docker</span><span>Figma</span><span>PostgreSQL</span><span>MySQL</span><span>Redis</span></div></article>
+<article class="skill-card"><h3>Professional Skills</h3><p>Skills I practice through team projects, leadership roles, and hackathons.</p><div class="skill-tags"><span>Leadership</span><span>Communication</span><span>Time management</span><span>Problem-solving</span><span>Adaptability</span><span>Deadline management</span><span>Teamwork</span><span>Collaboration</span></div></article>
 </div>
 </div>
 </section>
-<section id="certifications">
+
+<section id="education" aria-labelledby="education-title">
+<div class="section-inner">
+<h2 class="section-title" id="education-title">Education</h2>
+<div class="education-grid">
+<article class="info-card"><p class="timeline-period">2023&ndash;2027</p><h3>Gyalpozhing College of Information Technology</h3><p>BSc Computer Science &middot; Blockchain Technology</p><p>Thimphu, Bhutan</p></article>
+<article class="info-card"><p class="timeline-period">2017&ndash;2022</p><h3>The Royal Academy</h3><p>Pure Science</p><p>Paro, Bhutan</p></article>
+</div>
+</div>
+</section>
+<section id="certifications" aria-labelledby="certifications-title">
 <div class="section-inner">
 <p class="section-label">Credentials</p>
-<h2 class="section-title">Certifications</h2>
-<p class="section-desc">
-          Coursework and learning in UX design and cloud technologies.
-        </p>
+<h2 class="section-title" id="certifications-title">Certifications</h2>
+<p class="section-desc">Training in cloud computing, cybersecurity, and UX design.</p>
 <div class="cert-grid">
-<div class="cert-card">
-<div class="cert-icon">
-</div>
-<div class="cert-info">
-<strong>AWS Academy Cloud Foundations</strong>
-<span>Amazon Web Services</span>
-<span class="cert-date">Aug – Nov 2024</span>
+<article class="cert-card"><div class="cert-icon" aria-hidden="true"></div><div class="cert-info"><strong>Google UX Design Professional Certificate</strong><span>Google &middot; Coursera</span><span class="cert-date">2026</span><p>Eight-course programme covering user research, ideation, wireframing, prototyping, usability testing, and responsive design.</p></div></article>
+<article class="cert-card"><div class="cert-icon" aria-hidden="true"></div><div class="cert-info"><strong>AWS Academy Graduate &ndash; Cloud Foundations</strong><span>AWS Academy</span><span class="cert-date">October 2025</span><p>Cloud computing, core AWS services, cloud infrastructure, and cloud security.</p></div></article>
+<article class="cert-card"><div class="cert-icon" aria-hidden="true"></div><div class="cert-info"><strong>Introduction to Cybersecurity</strong><span>Cisco</span><span class="cert-date">April 2025</span><p>Information security, network security, common threats, and basic threat detection.</p></div></article>
 </div>
 </div>
-<div class="cert-card">
-<div class="cert-icon">
-</div>
-<div class="cert-info">
-<strong>Foundations of User Experience (UX) Design</strong>
-<span>Google / Coursera</span>
-<span class="cert-date">Feb 28, 2026</span>
-</div>
-</div>
-<div class="cert-card">
-<div class="cert-icon">
-</div>
-<div class="cert-info">
-<strong
-                >Start the UX Design Process: Empathize, Define &amp;
-                Ideate</strong
-              >
-<span>Google / Coursera</span>
-<span class="cert-date">March 4, 2026</span>
-</div>
-</div>
-<div class="cert-card">
-<div class="cert-icon">
-</div>
-<div class="cert-info">
-<strong>Build Wireframes &amp; Low-Fidelity Prototypes</strong>
-<span>Google / Coursera</span>
-<span class="cert-date">March 7, 2026</span>
-</div>
-</div>
-<div class="cert-card">
-<div class="cert-icon">
-</div>
-<div class="cert-info">
-<strong>Conduct UX Research &amp; Test Early Concepts</strong>
-<span>Google / Coursera</span>
-<span class="cert-date">March 15, 2026</span>
-</div>
-</div>
-<div class="cert-card">
-<div class="cert-icon">
-</div>
-<div class="cert-info">
-<strong
-                >Create High-Fidelity Designs &amp; Prototypes in Figma</strong
-              >
-<span>Google / Coursera</span>
-<span class="cert-date">March 28, 2026</span>
-</div>
-</div>
-<div class="cert-card">
-<div class="cert-icon">
-</div>
-<div class="cert-info">
-<strong>Build Dynamic User Interfaces (UI) for Websites</strong>
-<span>Google / Coursera</span>
-<span class="cert-date">April 5, 2026</span>
+</section>
+<section id="achievements" aria-labelledby="achievements-title">
+<div class="section-inner">
+<p class="section-label">Awards &amp; Recognition</p>
+<h2 class="section-title" id="achievements-title">Achievements</h2>
+<div class="conf-grid">
+<article class="conf-card">
+<p class="conf-year">November 2026</p>
+<h3>Show Me Your Agent Hackathon</h3>
+<div class="conf-img"><div class="asset-placeholder upload-photo" data-photo="assets/show-me-your-agent-hackathon.jpg" data-photo-alt="Certificate of Achievement for Show Me Your Agent Hackathon" aria-hidden="true"></div></div>
+<p><strong>Certificate of Achievement &middot; Gyalpozhing College of Information Technology</strong></p>
+<p>Developed an AI document assistant for BIL staff with document search, citation-based answers, and customer response drafts.</p>
+</article>
+<article class="conf-card">
+<p class="conf-year">May 2026</p>
+<h3>Blockchain Skills Bootcamp &amp; Hackathon</h3>
+<div class="conf-img"><div class="asset-placeholder upload-photo" data-photo="assets/blockchain-bootcamp-hackathon.jpg" data-photo-alt="Certificate of Appreciation for Blockchain Skills Bootcamp &amp; Hackathon" aria-hidden="true"></div></div>
+<p><strong>Certificate of Appreciation &middot; GovTech Agency, Thimphu</strong></p>
+<p>Collaborated on a tool to help job portals flag potentially forged certificates and documents.</p>
+</article>
+<article class="conf-card">
+<p class="conf-year">June 2024</p>
+<h3>Best Project Award</h3>
+<div class="conf-img"><div class="asset-placeholder upload-photo" data-photo="assets/best-project-award.jpg" data-photo-alt="Certificate of Achievement for Best Project Award" aria-hidden="true"></div></div>
+<p><strong>Certificate of Achievement &middot; GCIT Project Showcase, School of Future Computing</strong></p>
+<p>Received the Best Project Award at the GCIT Project Showcase.</p>
+</article>
+<article class="conf-card">
+<p class="conf-year">2024</p>
+<h3>Aspire Institute Leadership Training</h3>
+<div class="conf-img"><div class="asset-placeholder upload-photo" data-photo="assets/aspire-institute.jpg" data-photo-alt="Certificate of Completion for Aspire Institute Leadership Training" aria-hidden="true"></div></div>
+<p><strong>Certificate of Completion &middot; Aspire Institute, online</strong></p>
+<p>Completed all three modules of the leadership development programme.</p>
+</article>
+<article class="conf-card">
+<p class="conf-year">June 2023</p>
+<h3>Bhutan Baccalaureate Diploma</h3>
+<div class="conf-img"><div class="asset-placeholder upload-photo" data-photo="assets/bhutan-baccalaureate.jpg" data-photo-alt="Bhutan Baccalaureate Diploma" aria-hidden="true"></div></div>
+<p><strong>The Royal Academy, Paro</strong></p>
+<p>Awarded for completing the Bhutan Baccalaureate programme.</p>
+</article>
+<article class="conf-card">
+<p class="conf-year">2016</p>
+<h3>His Majesty the King&rsquo;s Certificate for Academic Excellence</h3>
+<div class="conf-img"><div class="asset-placeholder upload-photo" data-photo="assets/academic-excellence.jpg" data-photo-alt="His Majesty the King&rsquo;s Certificate for Academic Excellence" aria-hidden="true"></div></div>
+<p><strong>Office of Gyalpoi Zimpon, Thimphu</strong></p>
+<p>Recognized for academic excellence.</p>
+</article>
 </div>
 </div>
-<div class="cert-card">
-<div class="cert-icon">
+</section>
+
+<section id="hackathon-moments" aria-labelledby="hackathon-moments-title">
+<div class="section-inner">
+<h2 class="section-title" id="hackathon-moments-title">Hackathon Moments</h2>
+<div class="moments-gallery" data-photo-slider role="group" aria-label="Hackathon photo slider">
+<div class="moments-frame" id="hackathon-photo-frame">
+<div class="moments-slide"><div class="asset-placeholder" data-photo="assets/hackathon-01.jpg" data-photo-alt="Hackathon photo 1" aria-hidden="true"></div></div>
+<div class="moments-slide" hidden><div class="asset-placeholder" data-photo="assets/hackathon-02.jpg" data-photo-alt="Hackathon photo 2" aria-hidden="true"></div></div>
+<div class="moments-slide" hidden><div class="asset-placeholder" data-photo="assets/hackathon-03.jpg" data-photo-alt="Hackathon photo 3" aria-hidden="true"></div></div>
 </div>
-<div class="cert-info">
-<strong
-                >Design a User Experience for Social Good &amp; Prepare for
-                Jobs</strong
-              >
-<span>Google / Coursera</span>
-<span class="cert-date">April 15, 2026</span>
+<div class="moments-controls" hidden>
+<button type="button" class="design-btn" data-slide-step="-1" aria-controls="hackathon-photo-frame">Previous</button>
+<span class="moments-position" aria-live="polite"></span>
+<button type="button" class="design-btn" data-slide-step="1" aria-controls="hackathon-photo-frame">Next</button>
 </div>
 </div>
+</div>
+</section>
+<section id="professional-profile" aria-labelledby="profile-title">
+<div class="section-inner">
+<h2 class="section-title" id="profile-title">Professional Profile</h2>
+<div class="professional-grid">
+<article class="info-card"><h3>Blockchain development</h3><p>I build and test smart contracts, decentralized applications, and permissioned systems across Ethereum and Hyperledger Fabric.</p></article>
+<article class="info-card"><h3>Design and quality assurance</h3><p>I&rsquo;ve contributed to interface design, project documentation, and testing on team projects including BlockBuild and Onchain Wallet Profiler.</p></article>
+<article class="info-card"><h3>Team collaboration</h3><p>I bring experience from hackathons, student leadership, and coordinating delegate support with the GovTech protocol team.</p></article>
 </div>
 </div>
 </section>
@@ -517,12 +317,20 @@
         <p class="section-label">Let's Connect</p>
         <h2 class="section-title" id="contact-title">Get in Touch</h2>
         <p class="section-desc">
-          Open to internships, collaborations, and conversations about Blockchain, UX/UI design, and technology.
+          Get in touch about blockchain development, software projects, or collaboration.
         </p>
 
         <div class="contact-grid">
           <div>
-            <div class="contact-links"><div class="contact-link"><div class="contact-link-icon" aria-hidden="true">&#9993;</div><div class="contact-link-text"><strong>Email</strong><span>To be added</span></div></div><div class="contact-link"><div class="contact-link-icon" aria-hidden="true">in</div><div class="contact-link-text"><strong>LinkedIn</strong><span>To be added</span></div></div><div class="contact-link"><div class="contact-link-icon" aria-hidden="true">&lt;/&gt;</div><div class="contact-link-text"><strong>GitHub</strong><span>To be added</span></div></div><div class="contact-link"><div class="contact-link-icon" aria-hidden="true">&#9742;</div><div class="contact-link-text"><strong>Phone</strong><span>To be added</span></div></div><div class="contact-link"><div class="contact-link-icon" aria-hidden="true">&#9906;</div><div class="contact-link-text"><strong>Location</strong><span>To be added</span></div></div></div></div><form class="contact-form-area" id="contact-form">
+            <div class="contact-links">
+<a class="contact-link" href="mailto:somdekii840@gmail.com"><div class="contact-link-icon" aria-hidden="true">&#9993;</div><div class="contact-link-text"><strong>Email</strong><span>somdekii840@gmail.com</span></div></a>
+<a class="contact-link" href="https://www.linkedin.com/in/sonamdeki"><div class="contact-link-icon" aria-hidden="true">in</div><div class="contact-link-text"><strong>LinkedIn</strong><span>linkedin.com/in/sonamdeki</span></div></a>
+<a class="contact-link" href="https://github.com/SomDekii"><div class="contact-link-icon" aria-hidden="true">&lt;/&gt;</div><div class="contact-link-text"><strong>GitHub</strong><span>github.com/SomDekii</span></div></a>
+<a class="contact-link" href="tel:+97577688074"><div class="contact-link-icon" aria-hidden="true">&#9742;</div><div class="contact-link-text"><strong>Phone</strong><span>+975 77688074</span></div></a>
+<div class="contact-link"><div class="contact-link-icon" aria-hidden="true">&#9906;</div><div class="contact-link-text"><strong>Location</strong><span>Thimphu, Bhutan</span></div></div>
+</div>
+</div>
+<form class="contact-form-area" id="contact-form" data-email="somdekii840@gmail.com">
             <div>
               <label for="contact-name">Name</label>
               <input id="contact-name" name="name" type="text" autocomplete="name" placeholder="Your name" required />
@@ -545,2127 +353,43 @@
               ></textarea>
             </div>
 
-            <button class="btn-primary" type="submit" disabled title="Contact email to be added">Send Message</button><p class="contact-form-note" id="contact-form-status" role="status">Contact email to be added. This form is not connected yet.</p></form></div></div></section>
+            <button class="btn-primary" type="submit">Send Message</button>
+            <p class="contact-form-note" id="contact-form-status" role="status">Opens a draft in your email app.</p></form></div></div></section>
 </main>
 <footer class="wrap">
 <p>&copy; 2026 Sonam Deki</p>
-<span>Blockchain &middot; Design &middot; Curiosity</span>
-<a href="#home">Back to top &#8593;</a>
+<span>Blockchain development &middot; Cybersecurity</span>
+<a href="#home">Back to top</a>
 </footer>
-<dialog id="case-0" aria-label="Travel Diary case study">
-<div class="dialog-tools">
-<span>SELECTED WORK / 01</span>
-<button class="close" aria-label="Close case study">Close ✕</button>
-</div>
-<div class="asset-placeholder " data-asset="assets/travel_diary.png" aria-hidden="true">
-</div>
-<div class="cs-header">
-<div class="cs-header-meta">
-<span class="cs-label">Case Study</span>
-<div class="cs-meta-row">
-<span class="cs-meta-item"
-                      >
-<i class="fas fa-user-pen">
-</i> UI/UX Designer &amp;
-                      Frontend Developer</span
-                    >
-<span class="cs-meta-item"
-                      >
-<i class="fas fa-clock">
-</i> 5 Weeks</span
-                    >
-<span class="cs-meta-item"
-                      >
-<i class="fas fa-wrench">
-</i> Figma · HTML · CSS ·
-                      JavaScript</span
-                    >
-</div>
-</div>
-<h2 id="csModalTitle1" class="cs-title">Travel Diary</h2>
-<p class="cs-tagline">
-                  A social travel platform for capturing, sharing &amp; reliving
-                  adventures worldwide.
-                </p>
-</div>
-<div class="cs-body">
-<div class="cs-two-col">
-<div class="cs-card">
-<div class="cs-card-icon">
-<i class="fas fa-compass">
-</i>
-</div>
-<h3 class="cs-card-title">Project Overview</h3>
-<p>
-                      Travel Diary is a social travel platform where users can
-                      capture, share, and relive their travel experiences from
-                      around the world. Users can post journeys, upload
-                      memories, explore destinations, and connect with fellow
-                      travelers through an engaging and visually immersive
-                      experience.
-                    </p>
-</div>
-<div class="cs-card">
-<div class="cs-card-icon">
-<i class="fas fa-triangle-exclamation">
-</i>
-</div>
-<h3 class="cs-card-title">Problem Statement</h3>
-<p>
-                      Many travelers struggle to organize and share travel
-                      memories meaningfully. Existing platforms focus heavily on
-                      social interaction but lack a personalized storytelling
-                      experience and intuitive destination exploration.
-                    </p>
-</div>
-</div>
-<div class="cs-goal-banner">
-<div class="cs-goal-icon">
-<i class="fas fa-bullseye">
-</i>
-</div>
-<div>
-<h3>Goal</h3>
-<p>
-                      Design a visually engaging and user-friendly platform that
-                      enables travelers to document trips, share experiences,
-                      discover destinations, and connect with a global travel
-                      community seamlessly.
-                    </p>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span> Measurable Impact
-                  </h3>
-<div class="cs-metrics">
-<div class="cs-metric">
-<span class="cs-metric-num">38%</span>
-<span class="cs-metric-label"
-                        >Increase in user engagement during usability
-                        testing</span
-                      >
-</div>
-<div class="cs-metric">
-<span class="cs-metric-num">85%</span>
-<span class="cs-metric-label"
-                        >Task completion rate for trip posting on first
-                        attempt</span
-                      >
-</div>
-<div class="cs-metric">
-<span class="cs-metric-num">42%</span>
-<span class="cs-metric-label"
-                        >Faster navigation due to simplified content
-                        structure</span
-                      >
-</div>
-<div class="cs-metric">
-<span class="cs-metric-num">90%</span>
-<span class="cs-metric-label"
-                        >Positive feedback on storytelling and visual
-                        design</span
-                      >
-</div>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span> UX Decision Rationale
-                  </h3>
-<div class="cs-rationale-grid">
-<div class="cs-rationale-item">
-<i class="fas fa-table-cells-large">
-</i
-                      >
-<span
-                        >Card-based layouts improved readability and
-                        browsing</span
-                      >
-</div>
-<div class="cs-rationale-item">
-<i class="fas fa-image">
-</i
-                      >
-<span
-                        >Large imagery enhanced emotional connection and
-                        inspiration</span
-                      >
-</div>
-<div class="cs-rationale-item">
-<i class="fas fa-route">
-</i
-                      >
-<span
-                        >Minimal navigation reduced cognitive overload</span
-                      >
-</div>
-<div class="cs-rationale-item">
-<i class="fas fa-location-dot">
-</i
-                      >
-<span
-                        >Interactive destination sections improved
-                        engagement</span
-                      >
-</div>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span> User Personas
-                  </h3>
-<div class="cs-two-col">
-<div class="cs-persona">
-<div class="cs-persona-header">
-<div class="cs-persona-avatar">SC</div>
-<div>
-<strong>Sonam Choden</strong>
-<span>28 · Travel Enthusiast · Thimphu</span>
-</div>
-</div>
-<blockquote class="cs-quote">
-                        "As a traveler, I want to organize and share my travel
-                        memories easily so I can relive my experiences
-                        beautifully."
-                      </blockquote>
-<div class="cs-persona-cols">
-<div>
-<p class="cs-mini-label">Goals</p>
-<ul class="cs-list">
-<li>Share travel experiences visually</li>
-<li>Organize trips efficiently</li>
-</ul>
-</div>
-<div>
-<p class="cs-mini-label">Frustrations</p>
-<ul class="cs-list cs-list--red">
-<li>Complicated posting process</li>
-<li>Limited personalization</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cs-persona">
-<div class="cs-persona-header">
-<div class="cs-persona-avatar">PW</div>
-<div>
-<strong>Pema Wangchuk</strong>
-<span>22 · Student Traveler · Paro</span>
-</div>
-</div>
-<blockquote class="cs-quote">
-                        "As a student traveler, I want to explore travel stories
-                        and destinations easily so I can plan future adventures
-                        confidently."
-                      </blockquote>
-<div class="cs-persona-cols">
-<div>
-<p class="cs-mini-label">Goals</p>
-<ul class="cs-list">
-<li>Discover new destinations</li>
-<li>Connect with communities</li>
-</ul>
-</div>
-<div>
-<p class="cs-mini-label">Frustrations</p>
-<ul class="cs-list cs-list--red">
-<li>Difficult platform navigation</li>
-<li>Overwhelming content</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span> User Research Insights
-                  </h3>
-<div class="cs-two-col">
-<div>
-<p class="cs-mini-label" style="margin-bottom: 12px">
-                        Pain Points
-                      </p>
-<ul class="cs-list cs-list--red">
-<li>Difficult organization of travel memories</li>
-<li>Limited destination discovery</li>
-<li>Overcrowded interfaces</li>
-<li>Weak storytelling experience</li>
-</ul>
-</div>
-<div>
-<p class="cs-mini-label" style="margin-bottom: 12px">
-                        User Needs
-                      </p>
-<ul class="cs-list">
-<li>Simple posting experience</li>
-<li>Clean and immersive UI</li>
-<li>Destination exploration features</li>
-<li>Personalized storytelling layout</li>
-<li>Easy navigation and interaction</li>
-</ul>
-</div>
-</div>
-<div class="cs-methods">
-<p class="cs-mini-label" style="margin-bottom: 12px">
-                      Research Methods
-                    </p>
-<div class="cs-method-tags">
-<span>User Interviews (10 participants)</span>
-<span>Survey (40+ responses)</span>
-<span>Competitor Analysis</span>
-<span>Persona Creation</span>
-<span>Usability Testing</span>
-</div>
-</div>
-<div class="cs-insight-box">
-<i class="fas fa-lightbulb">
-</i>
-<p>
-<strong>Key Insight:</strong> Users preferred visually
-                      immersive layouts with simple navigation and personalized
-                      storytelling experiences that made travel memories feel
-                      meaningful and engaging.
-                    </p>
-</div>
-<div class="cs-design-links">
-<div class="cs-design-card">
-<div>
-<h4>Wireframes (low-fidelity)</h4>
-<p>
-                          Low-fidelity wireframes explored the structure of the
-                          homepage, travel feed, destination pages, posting
-                          flow, and user profiles.
-                        </p>
-<a
-                          href="https://www.figma.com/design/M14a2xnhqpvAIxtzNE7SXy/BT-Page?node-id=132-3&p=f&t=9sZ0uHFVDraOkEbG-0"
-                          target="_blank" rel="noopener noreferrer"
-                          class="cs-design-btn"
-                        >
-                          ↗ View lo-fi wireframes
-                        </a>
-</div>
-</div>
-<div class="cs-design-card">
-<div>
-<h4>High-fidelity designs</h4>
-<p>
-                          High-fidelity screens focused on immersive visuals,
-                          clean typography, modern layouts, and intuitive
-                          interactions to enhance storytelling and destination
-                          discovery.
-                        </p>
-<a
-                          href="https://www.figma.com/design/M14a2xnhqpvAIxtzNE7SXy/BT-Page?node-id=132-70&t=9sZ0uHFVDraOkEbG-0"
-                          target="_blank" rel="noopener noreferrer"
-                          class="cs-design-btn"
-                        >
-                          ↗ View hi-fi designs
-                        </a>
-</div>
-</div>
-<div class="cs-design-card">
-<div>
-<h4>Prototype</h4>
-<p>
-                          Interactive prototype demonstrating the complete user
-                          journey from browsing destinations to posting and
-                          sharing travel experiences.
-                        </p>
-<a
-                          href="https://www.figma.com/proto/M14a2xnhqpvAIxtzNE7SXy/BT-Page?node-id=132-70&t=9sZ0uHFVDraOkEbG-0&scaling=scale-down-width&content-scaling=fixed&page-id=132%3A2"
-                          target="_blank" rel="noopener noreferrer"
-                          class="cs-design-btn"
-                        >
-                          ▶ View interactive prototype
-                        </a>
-</div>
-</div>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span> Design Process
-                  </h3>
-<div class="cs-process-steps">
-<div class="cs-step">
-<div class="cs-step-num">01</div>
-<div class="cs-step-icon">
-<i class="fas fa-pencil-ruler">
-</i>
-</div>
-<h4>Wireframes</h4>
-<p>
-                        Low-fidelity wireframes explored homepage layouts,
-                        travel feeds, destination pages, posting flows, and user
-                        profiles.
-                      </p>
-</div>
-<div class="cs-step-arrow">
-<i class="fas fa-chevron-right">
-</i>
-</div>
-<div class="cs-step">
-<div class="cs-step-num">02</div>
-<div class="cs-step-icon">
-<i class="fas fa-palette">
-</i>
-</div>
-<h4>High-Fidelity</h4>
-<p>
-                        Focused on immersive visuals, modern layouts, clean
-                        typography, and intuitive interactions for storytelling.
-                      </p>
-</div>
-<div class="cs-step-arrow">
-<i class="fas fa-chevron-right">
-</i>
-</div>
-<div class="cs-step">
-<div class="cs-step-num">03</div>
-<div class="cs-step-icon">
-<i class="fas fa-play-circle">
-</i>
-</div>
-<h4>Prototype</h4>
-<p>
-                        Interactive prototype showcasing the complete user
-                        journey from destination browsing to posting and
-                        sharing.
-                      </p>
-</div>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span> Iterations &amp; Design
-                    Improvements
-                  </h3>
-<div class="cs-iterations">
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i
-                      >
-<span>Added larger destination preview cards</span>
-</div>
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i
-                      >
-<span>Improved feed spacing for readability</span>
-</div>
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i
-                      >
-<span>Simplified trip posting workflow</span>
-</div>
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i
-                      >
-<span>Added destination category filters</span>
-</div>
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i
-                      >
-<span>Enhanced mobile responsiveness</span>
-</div>
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i
-                      >
-<span
-                        >Redesigned navigation for smoother exploration</span
-                      >
-</div>
-</div>
-</div>
-<div class="cs-reflection">
-<div class="cs-reflection-icon">
-<i class="fas fa-star">
-</i>
-</div>
-<div>
-<h3>Reflection</h3>
-<p>
-                      This project strengthened my understanding of emotional
-                      design and visual storytelling in travel platforms.
-                      Balancing social interaction with personal memory-sharing
-                      significantly improved both usability and user engagement.
-                    </p>
-</div>
-</div>
-<div class="cs-footer-btn">
-<button class="close" type="button">Back to projects</button>
-</div>
-</div>
+<dialog id="case-0" aria-labelledby="case-title-0">
+<div class="dialog-tools"><span>Project details</span><button class="close" type="button">Close</button></div>
+<div class="cs-header"><span class="cs-label">Case Study</span><p class="cs-meta-item">Documentation &amp; Quality Assurance &middot; Ongoing</p><h2 class="cs-title" id="case-title-0">Onchain Wallet Profiler</h2><p class="cs-tagline">Ethereum wallet profiling platform that uses the Nansen API to analyze transactions, fund flows, trading patterns, and protocol interactions.</p></div>
+<div class="cs-body"><div class="cs-section"><h3 class="cs-section-title">Project Features</h3><p>Explains wallet behavior with classifications, risk indicators, and interactive visualizations.</p></div><div class="cs-footer-btn"><button class="close" type="button">Back to projects</button></div></div>
 </dialog>
-<dialog id="case-1" aria-label="Blood Bank Management System case study">
-<div class="dialog-tools">
-<span>SELECTED WORK / 02</span>
-<button class="close" aria-label="Close case study">Close ✕</button>
-</div>
-<div class="asset-placeholder " data-asset="assets/bloodbank.png" aria-hidden="true">
-</div>
-<div class="cs-header">
-<div class="cs-header-meta">
-<span class="cs-label">Case Study</span>
-<div class="cs-meta-row">
-<span class="cs-meta-item">
-<i class="fas fa-user-pen">
-</i>
-                      UI Designer &amp; Frontend Developer
-                    </span>
-<span class="cs-meta-item">
-<i class="fas fa-clock">
-</i>
-                      6 Weeks
-                    </span>
-<span class="cs-meta-item">
-<i class="fas fa-wrench">
-</i>
-                      Figma · HTML · CSS · JavaScript
-                    </span>
-</div>
-</div>
-<h2 id="csModalTitle2" class="cs-title">
-                  Blood Bank Management System
-                </h2>
-<p class="cs-tagline">
-                  A comprehensive healthcare platform for managing Bhutan’s
-                  blood donation ecosystem efficiently.
-                </p>
-</div>
-<div class="cs-body">
-<div class="cs-two-col">
-<div class="cs-card">
-<div class="cs-card-icon">
-<i class="fas fa-heart-pulse">
-</i>
-</div>
-<h3 class="cs-card-title">Project Overview</h3>
-<p>
-                      Blood Bank Management System is a comprehensive healthcare
-                      platform designed to manage Bhutan’s blood donation
-                      ecosystem efficiently. The system supports donor
-                      registration, real-time blood inventory tracking, blood
-                      request processing for hospitals and healthcare
-                      facilities, detailed reporting, and a multi-role
-                      notification system for donors, administrators, and
-                      healthcare providers.
-                    </p>
-</div>
-<div class="cs-card">
-<div class="cs-card-icon">
-<i class="fas fa-triangle-exclamation">
-</i>
-</div>
-<h3 class="cs-card-title">Problem Statement</h3>
-<p>
-                      Healthcare facilities often face delays in managing blood
-                      requests due to manual record handling, limited donor
-                      communication, and lack of real-time inventory visibility.
-                      This can lead to inefficient coordination during urgent
-                      medical situations.
-                    </p>
-</div>
-</div>
-<div class="cs-goal-banner">
-<div class="cs-goal-icon">
-<i class="fas fa-bullseye">
-</i>
-</div>
-<div>
-<h3>Goal</h3>
-<p>
-                      Design and develop a centralized and user-friendly
-                      platform that streamlines donor management, blood
-                      inventory tracking, and emergency blood request processing
-                      while improving communication between donors, admins, and
-                      healthcare providers.
-                    </p>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span>
-                    Measurable Impact
-                  </h3>
-<div class="cs-metrics">
-<div class="cs-metric">
-<span class="cs-metric-num">50%</span>
-<span class="cs-metric-label">
-                        Reduction in blood request processing time
-                      </span>
-</div>
-<div class="cs-metric">
-<span class="cs-metric-num">93%</span>
-<span class="cs-metric-label">
-                        Accuracy in inventory tracking during testing
-                      </span>
-</div>
-<div class="cs-metric">
-<span class="cs-metric-num">40%</span>
-<span class="cs-metric-label">
-                        Faster donor registration process
-                      </span>
-</div>
-<div class="cs-metric">
-<span class="cs-metric-num">Real-time</span>
-<span class="cs-metric-label">
-                        Improved emergency response coordination through
-                        notifications
-                      </span>
-</div>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span>
-                    UX Decision Rationale
-                  </h3>
-<div class="cs-rationale-grid">
-<div class="cs-rationale-item">
-<i class="fas fa-table-cells-large">
-</i>
-<span>
-                        Dashboard-based interface simplified inventory and
-                        request management
-                      </span>
-</div>
-<div class="cs-rationale-item">
-<i class="fas fa-droplet">
-</i>
-<span>
-                        Color-coded blood stock indicators improved quick
-                        availability checks
-                      </span>
-</div>
-<div class="cs-rationale-item">
-<i class="fas fa-user-shield">
-</i>
-<span>
-                        Multi-role access created smoother workflows for donors,
-                        admins, and hospitals
-                      </span>
-</div>
-<div class="cs-rationale-item">
-<i class="fas fa-bell">
-</i>
-<span>
-                        Real-time notifications improved emergency communication
-                        efficiency
-                      </span>
-</div>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span>
-                    User Personas
-                  </h3>
-<div class="cs-two-col">
-<div class="cs-persona">
-<div class="cs-persona-header">
-<div class="cs-persona-avatar">ST</div>
-<div>
-<strong>Sonam Tobgay</strong>
-<span>38 · Hospital Staff · Thimphu</span>
-</div>
-</div>
-<blockquote class="cs-quote">
-                        "As a healthcare staff member, I want to check blood
-                        availability instantly, so I can process emergency
-                        requests quickly and efficiently."
-                      </blockquote>
-<div class="cs-persona-cols">
-<div>
-<p class="cs-mini-label">Goals</p>
-<ul class="cs-list">
-<li>Access real-time blood inventory</li>
-<li>Process requests faster during emergencies</li>
-</ul>
-</div>
-<div>
-<p class="cs-mini-label">Frustrations</p>
-<ul class="cs-list cs-list--red">
-<li>Delayed communication with donors</li>
-<li>Manual paperwork and inventory tracking</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cs-persona">
-<div class="cs-persona-header">
-<div class="cs-persona-avatar">CD</div>
-<div>
-<strong>Chimi Dema</strong>
-<span>24 · Regular Blood Donor · Paro</span>
-</div>
-</div>
-<blockquote class="cs-quote">
-                        "As a donor, I want to receive notifications about blood
-                        donation requests, so I can contribute quickly whenever
-                        needed."
-                      </blockquote>
-<div class="cs-persona-cols">
-<div>
-<p class="cs-mini-label">Goals</p>
-<ul class="cs-list">
-<li>
-                              Register and manage donor information easily
-                            </li>
-<li>Receive real-time donation alerts</li>
-</ul>
-</div>
-<div>
-<p class="cs-mini-label">Frustrations</p>
-<ul class="cs-list cs-list--red">
-<li>Lack of communication and reminders</li>
-<li>Complicated donor registration process</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span>
-                    User Research Insights
-                  </h3>
-<div class="cs-two-col">
-<div>
-<p class="cs-mini-label" style="margin-bottom: 12px">
-                        Pain Points
-                      </p>
-<ul class="cs-list cs-list--red">
-<li>Manual blood inventory management</li>
-<li>Delayed emergency request processing</li>
-<li>Limited donor communication system</li>
-<li>
-                          Difficulty tracking blood availability in real time
-                        </li>
-</ul>
-</div>
-<div>
-<p class="cs-mini-label" style="margin-bottom: 12px">
-                        User Needs
-                      </p>
-<ul class="cs-list">
-<li>Real-time inventory visibility</li>
-<li>Fast blood request handling</li>
-<li>Easy donor registration and management</li>
-<li>Reliable notification system</li>
-<li>Secure and organized healthcare records</li>
-</ul>
-</div>
-</div>
-<div class="cs-methods">
-<p class="cs-mini-label" style="margin-bottom: 12px">
-                      Research Methods
-                    </p>
-<div class="cs-method-tags">
-<span>User Interviews (10 participants)</span>
-<span>Survey (40+ responses)</span>
-<span>Workflow Analysis</span>
-<span>Persona Creation</span>
-<span>Usability Testing</span>
-</div>
-</div>
-<div class="cs-insight-box">
-<i class="fas fa-lightbulb">
-</i>
-<p>
-<strong>Key Insight:</strong>
-                      Healthcare staff prioritize speed, accuracy, and
-                      accessibility during emergency situations, while donors
-                      value clear communication and simple registration
-                      experiences.
-                    </p>
-</div>
-<div class="cs-design-links">
-<div class="cs-design-card">
-<div>
-<h4>Wireframes (low-fidelity)</h4>
-<p>
-                          Low-fidelity wireframes explored dashboard layouts,
-                          donor registration flow, inventory tracking screens,
-                          blood request management, and notification systems.
-                        </p>
-<a
-                          href="https://www.figma.com/design/Nrdu45Bv31VJiCkSoakwqJ/Blood-Bank-management-system?node-id=0-1&p=f&t=EbsedZxBPbaUZMbV-0"
-                          target="_blank" rel="noopener noreferrer"
-                          class="cs-design-btn"
-                        >
-                          ↗ View lo-fi wireframes
-                        </a>
-</div>
-</div>
-<div class="cs-design-card">
-<div>
-<h4>High-fidelity designs</h4>
-<p>
-                          High-fidelity designs focused on accessibility,
-                          organized healthcare dashboards, clean data
-                          visualization, and responsive user flows for different
-                          user roles.
-                        </p>
-<a
-                          href="https://www.figma.com/design/Nrdu45Bv31VJiCkSoakwqJ/Blood-Bank-management-system?node-id=8-8666&t=EbsedZxBPbaUZMbV-0"
-                          target="_blank" rel="noopener noreferrer"
-                          class="cs-design-btn"
-                        >
-                          ↗ View hi-fi designs
-                        </a>
-</div>
-</div>
-<div class="cs-design-card">
-<div>
-<h4>Prototype</h4>
-<p>
-                          Interactive prototype demonstrating workflows from
-                          donor registration and blood requests to inventory
-                          management and notification handling.
-                        </p>
-<a
-                          href="https://www.figma.com/proto/Nrdu45Bv31VJiCkSoakwqJ/Blood-Bank-management-system?node-id=8-8666&t=EbsedZxBPbaUZMbV-0&scaling=min-zoom&content-scaling=fixed&page-id=8%3A2&starting-point-node-id=164%3A7343"
-                          target="_blank" rel="noopener noreferrer"
-                          class="cs-design-btn"
-                        >
-                          ▶ View interactive prototype
-                        </a>
-</div>
-</div>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span>
-                    Iterations &amp; Design Improvements
-                  </h3>
-<div class="cs-iterations">
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i>
-<span>Added color-coded blood stock indicators</span>
-</div>
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i>
-<span>Simplified donor registration form</span>
-</div>
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i>
-<span>Improved emergency request visibility</span>
-</div>
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i>
-<span>Redesigned admin dashboard for quicker access</span>
-</div>
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i>
-<span
-                        >Enhanced notification system for multiple user
-                        roles</span
-                      >
-</div>
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i>
-<span
-                        >Optimized mobile responsiveness for healthcare
-                        staff</span
-                      >
-</div>
-</div>
-</div>
-<div class="cs-reflection">
-<div class="cs-reflection-icon">
-<i class="fas fa-star">
-</i>
-</div>
-<div>
-<h3>Reflection</h3>
-<p>
-                      This project highlighted the importance of usability and
-                      clarity in healthcare systems where efficiency directly
-                      impacts emergency response. Designing role-based
-                      experiences and real-time communication features
-                      significantly improved workflow management and user
-                      confidence within the platform.
-                    </p>
-</div>
-</div>
-<div class="cs-footer-btn">
-<button class="close" type="button">Back to projects</button>
-</div>
-</div>
+<dialog id="case-1" aria-labelledby="case-title-1">
+<div class="dialog-tools"><span>Project details</span><button class="close" type="button">Close</button></div>
+<div class="cs-header"><span class="cs-label">Case Study</span><p class="cs-meta-item">Documentation &amp; UI/UX Design &middot; April 2026</p><h2 class="cs-title" id="case-title-1">BlockBuild</h2><p class="cs-tagline">2D multiplayer blockchain game that uses Solidity smart contracts, ERC-20 tokens, and ERC-1155 NFTs for virtual land ownership and asset trading.</p></div>
+<div class="cs-body"><div class="cs-section"><h3 class="cs-section-title">Project Features</h3><p>Features a player-driven economy with land purchases, NFT assets, player hiring, and token rewards.</p></div><div class="cs-footer-btn"><button class="close" type="button">Back to projects</button></div></div>
 </dialog>
-<dialog id="case-2" aria-label="Druk Brain Scan case study">
-<div class="dialog-tools">
-<span>SELECTED WORK / 03</span>
-<button class="close" aria-label="Close case study">Close ✕</button>
-</div>
-<div class="asset-placeholder " data-asset="assets/brainScan.png" aria-hidden="true">
-</div>
-<div class="cs-header">
-<div class="cs-header-meta">
-<span class="cs-label">Case Study</span>
-<div class="cs-meta-row">
-<span class="cs-meta-item"
-                      >
-<i class="fas fa-user-pen">
-</i> UI/UX Designer</span
-                    >
-<span class="cs-meta-item"
-                      >
-<i class="fas fa-clock">
-</i> 5 Weeks</span
-                    >
-<span class="cs-meta-item"
-                      >
-<i class="fas fa-wrench">
-</i> Figma</span
-                    >
-</div>
-</div>
-<h2 id="csModalTitle3" class="cs-title">Druk Brain Scan</h2>
-<p class="cs-tagline">
-                  An AI-powered healthcare platform for clear and accessible
-                  brain tumour detection.
-                </p>
-</div>
-<div class="cs-body">
-<div class="cs-two-col">
-<div class="cs-card">
-<div class="cs-card-icon">
-<i class="fas fa-brain">
-</i>
-</div>
-<h3 class="cs-card-title">Project Overview</h3>
-<p>
-                      Druk Brain Scan is an AI-powered healthcare platform
-                      designed to assist in brain tumour detection using the
-                      VGG16 deep learning model. The project focused on creating
-                      an intuitive and accessible user experience that helps
-                      healthcare professionals upload scans, view AI-generated
-                      predictions, and interpret clinical results easily without
-                      requiring technical AI knowledge.
-                    </p>
-</div>
-<div class="cs-card">
-<div class="cs-card-icon">
-<i class="fas fa-triangle-exclamation">
-</i>
-</div>
-<h3 class="cs-card-title">Problem Statement</h3>
-<p>
-                      Healthcare professionals often struggle to interpret
-                      complex AI-generated medical outputs due to technical
-                      interfaces and unclear visualizations. Existing systems
-                      lack user-friendly workflows that simplify AI-assisted
-                      diagnosis for non-technical users.
-                    </p>
-</div>
-</div>
-<div class="cs-goal-banner">
-<div class="cs-goal-icon">
-<i class="fas fa-bullseye">
-</i>
-</div>
-<div>
-<h3>Goal</h3>
-<p>
-                      Design a clear and efficient medical interface that
-                      enables healthcare professionals to upload MRI scans,
-                      receive AI-powered tumour detection results, and
-                      understand predictions confidently through intuitive
-                      visual feedback and simplified workflows.
-                    </p>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span> Measurable Impact
-                  </h3>
-<div class="cs-metrics">
-<div class="cs-metric">
-<span class="cs-metric-num">95.8%</span>
-<span class="cs-metric-label"
-                        >Test accuracy achieved using the VGG16 model</span
-                      >
-</div>
-<div class="cs-metric">
-<span class="cs-metric-num">87%</span>
-<span class="cs-metric-label"
-                        >Users interpreted AI outputs without assistance</span
-                      >
-</div>
-<div class="cs-metric">
-<span class="cs-metric-num">41%</span>
-<span class="cs-metric-label"
-                        >Reduction in scan result review time during
-                        testing</span
-                      >
-</div>
-<div class="cs-metric">
-<span class="cs-metric-num">Improved</span>
-<span class="cs-metric-label"
-                        >Confidence in AI-assisted diagnosis</span
-                      >
-</div>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span> UX Decision Rationale
-                  </h3>
-<div class="cs-rationale-grid">
-<div class="cs-rationale-item">
-<i class="fas fa-chart-pie">
-</i>
-<span
-                        >Simplified AI result visualization made predictions
-                        easier to interpret</span
-                      >
-</div>
-<div class="cs-rationale-item">
-<i class="fas fa-table-columns">
-</i>
-<span
-                        >Clean medical dashboard reduced cognitive overload
-                        during scan analysis</span
-                      >
-</div>
-<div class="cs-rationale-item">
-<i class="fas fa-circle-half-stroke">
-</i>
-<span
-                        >Color-coded confidence indicators improved prediction
-                        understanding</span
-                      >
-</div>
-<div class="cs-rationale-item">
-<i class="fas fa-upload">
-</i>
-<span
-                        >Step-by-step upload workflow minimized scan submission
-                        errors</span
-                      >
-</div>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span> User Personas
-                  </h3>
-<div class="cs-two-col">
-<div class="cs-persona">
-<div class="cs-persona-header">
-<div class="cs-persona-avatar">PW</div>
-<div>
-<strong>Dr. Pema Wangdi</strong>
-<span>42 · Radiologist · Thimphu</span>
-</div>
-</div>
-<blockquote class="cs-quote">
-                        "As a radiologist, I want AI results to be presented
-                        clearly, so I can review scan predictions quickly and
-                        confidently during diagnosis."
-                      </blockquote>
-<div class="cs-persona-cols">
-<div>
-<p class="cs-mini-label">Goals</p>
-<ul class="cs-list">
-<li>Interpret scan results efficiently</li>
-<li>Reduce complexity in AI-assisted workflows</li>
-</ul>
-</div>
-<div>
-<p class="cs-mini-label">Frustrations</p>
-<ul class="cs-list cs-list--red">
-<li>Technical and confusing AI outputs</li>
-<li>Time-consuming scan review process</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cs-persona">
-<div class="cs-persona-header">
-<div class="cs-persona-avatar">SL</div>
-<div>
-<strong>Sonam Lhamo</strong>
-<span>29 · Medical Intern · Mongar</span>
-</div>
-</div>
-<blockquote class="cs-quote">
-                        "As a medical intern, I want an easy-to-use AI
-                        diagnostic platform, so I can understand tumour
-                        detection results more confidently."
-                      </blockquote>
-<div class="cs-persona-cols">
-<div>
-<p class="cs-mini-label">Goals</p>
-<ul class="cs-list">
-<li>Learn and interpret AI-assisted diagnosis</li>
-<li>
-                              Navigate the platform easily during clinical work
-                            </li>
-</ul>
-</div>
-<div>
-<p class="cs-mini-label">Frustrations</p>
-<ul class="cs-list cs-list--red">
-<li>Complicated medical interfaces</li>
-<li>
-                              Lack of visual guidance in diagnostic systems
-                            </li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span> User Research Insights
-                  </h3>
-<div class="cs-two-col">
-<div>
-<p class="cs-mini-label" style="margin-bottom: 12px">
-                        Pain Points
-                      </p>
-<ul class="cs-list cs-list--red">
-<li>Complex AI-generated medical outputs</li>
-<li>Difficult navigation in healthcare systems</li>
-<li>Limited visual explanation of predictions</li>
-<li>Confusing workflow for scan uploads and reviews</li>
-</ul>
-</div>
-<div>
-<p class="cs-mini-label" style="margin-bottom: 12px">
-                        User Needs
-                      </p>
-<ul class="cs-list">
-<li>Clear diagnostic visualization</li>
-<li>Easy MRI scan upload process</li>
-<li>Simple and understandable AI predictions</li>
-<li>Organized medical dashboard</li>
-<li>Fast and reliable workflow experience</li>
-</ul>
-</div>
-</div>
-<div class="cs-methods">
-<p class="cs-mini-label" style="margin-bottom: 12px">
-                      Research Methods
-                    </p>
-<div class="cs-method-tags">
-<span>User Interviews (8 participants)</span>
-<span>Survey (30+ responses)</span>
-<span>Competitor Analysis</span>
-<span>Persona Creation</span>
-<span>Usability Testing</span>
-</div>
-</div>
-<div class="cs-insight-box">
-<i class="fas fa-lightbulb">
-</i>
-<p>
-<strong>Key Insight:</strong>
-                      Healthcare professionals value simplicity, clarity, and
-                      trust when interacting with AI-assisted diagnostic
-                      systems. Visual explanations and clean workflows
-                      significantly improved confidence and usability.
-                    </p>
-</div>
-<div class="cs-design-links">
-<div class="cs-design-card">
-<div>
-<h4>Wireframes (low-fidelity)</h4>
-<p>
-                          Low-fidelity wireframes explored the MRI upload flow,
-                          diagnostic dashboard, AI prediction screens, and
-                          result visualization layouts.
-                        </p>
-<a href="https://www.figma.com/design/yrcPlJGgo2McWs8VVQLXNn/PRJ-202---Brain-Tumor-Recognition?node-id=5-664&p=f&t=RMazEb6fM8rHyHZd-0" target="_blank" rel="noopener noreferrer" class="cs-design-btn"
-                          >↗ View lo-fi wireframes</a
-                        >
-</div>
-</div>
-<div class="cs-design-card">
-<div>
-<h4>High-fidelity designs</h4>
-<p>
-                          High-fidelity designs focused on medical
-                          accessibility, clean layouts, visual hierarchy, and
-                          simplified AI result presentation for healthcare
-                          professionals.
-                        </p>
-<a href="https://www.figma.com/design/yrcPlJGgo2McWs8VVQLXNn/PRJ-202---Brain-Tumor-Recognition?node-id=83-194&t=RMazEb6fM8rHyHZd-0" target="_blank" rel="noopener noreferrer" class="cs-design-btn"
-                          >↗ View hi-fi designs</a
-                        >
-</div>
-</div>
-<div class="cs-design-card">
-<div>
-<h4>Prototype</h4>
-<p>
-                          Interactive prototype simulating the full workflow
-                          from MRI upload to AI-powered tumour detection and
-                          prediction review.
-                        </p>
-<a href="https://www.figma.com/proto/yrcPlJGgo2McWs8VVQLXNn/PRJ-202---Brain-Tumor-Recognition?node-id=83-194&t=RMazEb6fM8rHyHZd-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" target="_blank" rel="noopener noreferrer" class="cs-design-btn"
-                          >▶ View interactive prototype</a
-                        >
-</div>
-</div>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span> Iterations &amp; Design
-                    Improvements
-                  </h3>
-<div class="cs-iterations">
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i
-                      >
-<span>Added confidence percentage visualization</span>
-</div>
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i
-                      >
-<span>Simplified diagnostic result layout</span>
-</div>
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i
-                      >
-<span>Improved MRI upload guidance</span>
-</div>
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i
-                      >
-<span>Enhanced dashboard readability</span>
-</div>
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i
-                      >
-<span>Reduced unnecessary technical terminology</span>
-</div>
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i
-                      >
-<span>Optimized mobile and tablet responsiveness</span>
-</div>
-</div>
-</div>
-<div class="cs-reflection">
-<div class="cs-reflection-icon">
-<i class="fas fa-star">
-</i>
-</div>
-<div>
-<h3>Reflection</h3>
-<p>
-                      This project emphasized the importance of designing
-                      trustworthy and understandable AI experiences in
-                      healthcare. Translating complex machine learning outputs
-                      into clear, human-centered interfaces helped bridge the
-                      gap between advanced technology and practical clinical
-                      use.
-                    </p>
-</div>
-</div>
-<div class="cs-footer-btn">
-<button class="close" type="button">Back to projects</button>
-</div>
-</div>
+<dialog id="case-2" aria-labelledby="case-title-2">
+<div class="dialog-tools"><span>Project details</span><button class="close" type="button">Close</button></div>
+<div class="cs-header"><span class="cs-label">Case Study</span><p class="cs-meta-item">Full-Stack Developer &middot; March 2026</p><h2 class="cs-title" id="case-title-2">TaskSphere</h2><p class="cs-tagline">Task management app built with Spring Boot, MongoDB, and React/Vite, with JWT authentication and real-time updates via Server-Sent Events.</p></div>
+<div class="cs-body"><div class="cs-section"><h3 class="cs-section-title">Project Features</h3><p>Supports configurable email and push notifications and uses Factory, Observer, Adapter, Strategy, and State patterns.</p></div><div class="cs-footer-btn"><button class="close" type="button">Back to projects</button></div></div>
 </dialog>
-<dialog id="case-3" aria-label="Grab&GO case study">
-<div class="dialog-tools">
-<span>SELECTED WORK / 04</span>
-<button class="close" aria-label="Close case study">Close ✕</button>
-</div>
-<div class="asset-placeholder " data-asset="assets/GrabGo.png" aria-hidden="true">
-</div>
-<div class="cs-header">
-<div class="cs-header-meta">
-<span class="cs-label">Case Study</span>
-<div class="cs-meta-row">
-<span class="cs-meta-item"
-                      >
-<i class="fas fa-user-pen">
-</i> UI/UX Designer &amp;
-                      Frontend Developer</span
-                    >
-<span class="cs-meta-item"
-                      >
-<i class="fas fa-clock">
-</i> 5 Weeks</span
-                    >
-<span class="cs-meta-item"
-                      >
-<i class="fas fa-wrench">
-</i> Figma · HTML · CSS ·
-                      JavaScript</span
-                    >
-</div>
-</div>
-<h2 id="csModalTitle4" class="cs-title">
-                  Grab&amp;GO — Food Ordering App
-                </h2>
-<p class="cs-tagline">
-                  A fast and responsive takeaway food ordering experience for
-                  busy users.
-                </p>
-</div>
-<div class="cs-body">
-<div class="cs-two-col">
-<div class="cs-card">
-<div class="cs-card-icon">
-<i class="fas fa-burger">
-</i>
-</div>
-<h3 class="cs-card-title">Project Overview</h3>
-<p>
-                      Grab&amp;GO is a takeaway food ordering web application
-                      designed to provide users with a fast, smooth, and
-                      convenient ordering experience. The platform allows users
-                      to browse menus, customize meals, place takeaway orders,
-                      and receive instant order confirmations through a clean
-                      and user-friendly interface.
-                    </p>
-</div>
-<div class="cs-card">
-<div class="cs-card-icon">
-<i class="fas fa-triangle-exclamation">
-</i>
-</div>
-<h3 class="cs-card-title">Problem Statement</h3>
-<p>
-                      Many food ordering platforms overwhelm users with
-                      cluttered interfaces, complicated checkout processes, and
-                      slow navigation, leading to abandoned orders and
-                      frustrating user experiences — especially during busy meal
-                      hours.
-                    </p>
-</div>
-</div>
-<div class="cs-goal-banner">
-<div class="cs-goal-icon">
-<i class="fas fa-bullseye">
-</i>
-</div>
-<div>
-<h3>Goal</h3>
-<p>
-                      Design and develop a responsive food ordering platform
-                      that simplifies menu browsing, reduces checkout friction,
-                      and enables users to place takeaway orders quickly and
-                      efficiently.
-                    </p>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span> Measurable Impact
-                  </h3>
-<div class="cs-metrics">
-<div class="cs-metric">
-<span class="cs-metric-num">44%</span>
-<span class="cs-metric-label"
-                        >Faster checkout completion during usability
-                        testing</span
-                      >
-</div>
-<div class="cs-metric">
-<span class="cs-metric-num">89%</span>
-<span class="cs-metric-label"
-                        >Users completed food orders successfully on first
-                        attempt</span
-                      >
-</div>
-<div class="cs-metric">
-<span class="cs-metric-num">37%</span>
-<span class="cs-metric-label"
-                        >Reduction in cart abandonment through simplified
-                        checkout</span
-                      >
-</div>
-<div class="cs-metric">
-<span class="cs-metric-num">Improved</span>
-<span class="cs-metric-label"
-                        >Mobile usability across different screen sizes</span
-                      >
-</div>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span> UX Decision Rationale
-                  </h3>
-<div class="cs-rationale-grid">
-<div class="cs-rationale-item">
-<i class="fas fa-minimize">
-</i>
-<span
-                        >Minimal and clean interface reduced distractions and
-                        improved ordering focus</span
-                      >
-</div>
-<div class="cs-rationale-item">
-<i class="fas fa-table-cells-large">
-</i>
-<span
-                        >Responsive card-based menu layout enhanced browsing
-                        across devices</span
-                      >
-</div>
-<div class="cs-rationale-item">
-<i class="fas fa-cart-shopping">
-</i>
-<span
-                        >Simplified checkout flow reduced frustration and
-                        abandoned orders</span
-                      >
-</div>
-<div class="cs-rationale-item">
-<i class="fas fa-receipt">
-</i>
-<span
-                        >Sticky cart summary improved order visibility during
-                        browsing and checkout</span
-                      >
-</div>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span> User Personas
-                  </h3>
-<div class="cs-two-col">
-<div class="cs-persona">
-<div class="cs-persona-header">
-<div class="cs-persona-avatar">KW</div>
-<div>
-<strong>Kinley Wangmo</strong>
-<span>27 · Office Worker · Thimphu</span>
-</div>
-</div>
-<blockquote class="cs-quote">
-                        "As a busy office worker, I want to place takeaway
-                        orders quickly, so I can save time during lunch breaks."
-                      </blockquote>
-<div class="cs-persona-cols">
-<div>
-<p class="cs-mini-label">Goals</p>
-<ul class="cs-list">
-<li>Order meals efficiently</li>
-<li>Avoid long and confusing checkout processes</li>
-</ul>
-</div>
-<div>
-<p class="cs-mini-label">Frustrations</p>
-<ul class="cs-list cs-list--red">
-<li>Slow navigation on food ordering apps</li>
-<li>Complicated checkout experience</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cs-persona">
-<div class="cs-persona-header">
-<div class="cs-persona-avatar">UD</div>
-<div>
-<strong>Ugyen Dorji</strong>
-<span>21 · University Student · Paro</span>
-</div>
-</div>
-<blockquote class="cs-quote">
-                        "As a student, I want to browse menus easily on my
-                        phone, so I can order food quickly without confusion."
-                      </blockquote>
-<div class="cs-persona-cols">
-<div>
-<p class="cs-mini-label">Goals</p>
-<ul class="cs-list">
-<li>Browse food categories smoothly</li>
-<li>Place quick takeaway orders on mobile</li>
-</ul>
-</div>
-<div>
-<p class="cs-mini-label">Frustrations</p>
-<ul class="cs-list cs-list--red">
-<li>Cluttered food menus</li>
-<li>Poor mobile responsiveness</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span> User Research Insights
-                  </h3>
-<div class="cs-two-col">
-<div>
-<p class="cs-mini-label" style="margin-bottom: 12px">
-                        Pain Points
-                      </p>
-<ul class="cs-list cs-list--red">
-<li>Complicated ordering workflows</li>
-<li>Cluttered menu interfaces</li>
-<li>Slow checkout process</li>
-<li>Poor mobile responsiveness</li>
-</ul>
-</div>
-<div>
-<p class="cs-mini-label" style="margin-bottom: 12px">
-                        User Needs
-                      </p>
-<ul class="cs-list">
-<li>Quick menu browsing</li>
-<li>Smooth checkout experience</li>
-<li>Clear order summary and pricing</li>
-<li>Responsive mobile interface</li>
-<li>Fast order confirmation process</li>
-</ul>
-</div>
-</div>
-<div class="cs-methods">
-<p class="cs-mini-label" style="margin-bottom: 12px">
-                      Research Methods
-                    </p>
-<div class="cs-method-tags">
-<span>User Interviews (10 participants)</span>
-<span>Survey (45+ responses)</span>
-<span>Competitor Analysis</span>
-<span>Persona Creation</span>
-<span>Usability Testing</span>
-</div>
-</div>
-<div class="cs-insight-box">
-<i class="fas fa-lightbulb">
-</i>
-<p>
-<strong>Key Insight:</strong>
-                      Users prioritize speed, simplicity, and responsive design
-                      when ordering takeaway food online. Streamlined ordering
-                      flows significantly improved user satisfaction and reduced
-                      abandonment rates.
-                    </p>
-</div>
-<div class="cs-design-links">
-<div class="cs-design-card">
-<div>
-<h4>Wireframes (low-fidelity)</h4>
-<p>
-                          Low-fidelity wireframes explored menu browsing, food
-                          category navigation, cart interactions, and checkout
-                          flow layouts.
-                        </p>
-<a href="https://www.figma.com/design/BQmp8SrAP7O8Qyy1b8Pakv/Grab-and-go-group12-desktop?node-id=0-1&p=f&t=xnIJ8mthM6uukYgf-0" target="_blank" rel="noopener noreferrer" class="cs-design-btn"
-                          >↗ View lo-fi wireframes</a
-                        >
-</div>
-</div>
-<div class="cs-design-card">
-<div>
-<h4>High-fidelity designs</h4>
-<p>
-                          High-fidelity designs focused on clean visual
-                          hierarchy, accessible navigation, modern food cards,
-                          and responsive layouts optimized for both desktop and
-                          mobile users.
-                        </p>
-<a href="https://www.figma.com/design/BQmp8SrAP7O8Qyy1b8Pakv/Grab-and-go-group12-desktop?node-id=1505-3120&t=xnIJ8mthM6uukYgf-0" target="_blank" rel="noopener noreferrer" class="cs-design-btn"
-                          >↗ View hi-fi designs</a
-                        >
-</div>
-</div>
-<div class="cs-design-card">
-<div>
-<h4>Prototype</h4>
-<p>
-                          Interactive prototype demonstrating the full takeaway
-                          ordering experience from menu browsing to checkout and
-                          order confirmation.
-                        </p>
-<a href="https://www.figma.com/proto/BQmp8SrAP7O8Qyy1b8Pakv/Grab-and-go-group12-desktop?node-id=1505-3120&t=xnIJ8mthM6uukYgf-0&scaling=min-zoom&content-scaling=fixed&page-id=1505%3A3118" target="_blank" rel="noopener noreferrer" class="cs-design-btn"
-                          >▶ View interactive prototype</a
-                        >
-</div>
-</div>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span> Iterations &amp; Design
-                    Improvements
-                  </h3>
-<div class="cs-iterations">
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i
-                      >
-<span>Simplified navigation menu structure</span>
-</div>
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i
-                      >
-<span
-                        >Enlarged food item cards for better visibility</span
-                      >
-</div>
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i
-                      >
-<span>Added sticky cart summary during browsing</span>
-</div>
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i
-                      >
-<span>Reduced checkout steps for faster ordering</span>
-</div>
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i
-                      >
-<span>Improved mobile responsiveness and spacing</span>
-</div>
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i
-                      >
-<span>Enhanced CTA visibility for order actions</span>
-</div>
-</div>
-</div>
-<div class="cs-reflection">
-<div class="cs-reflection-icon">
-<i class="fas fa-star">
-</i>
-</div>
-<div>
-<h3>Reflection</h3>
-<p>
-                      This project reinforced the importance of reducing
-                      friction in food ordering experiences. Combining intuitive
-                      UX design with responsive frontend development helped
-                      create a faster, smoother, and more enjoyable ordering
-                      journey for users across devices.
-                    </p>
-</div>
-</div>
-<div class="cs-footer-btn">
-<button class="close" type="button">Back to projects</button>
-</div>
-</div>
+<dialog id="case-3" aria-labelledby="case-title-3">
+<div class="dialog-tools"><span>Project details</span><button class="close" type="button">Close</button></div>
+<div class="cs-header"><span class="cs-label">Case Study</span><p class="cs-meta-item">Blockchain Developer &middot; October 2025</p><h2 class="cs-title" id="case-title-3">Transparent Charity Donation System</h2><p class="cs-tagline">Hyperledger Fabric system that tracks charitable donations from submission to distribution.</p></div>
+<div class="cs-body"><div class="cs-section"><h3 class="cs-section-title">Project Features</h3><p>Gives donors, charities, and auditors permissioned access to monitor donations.</p></div><div class="cs-footer-btn"><button class="close" type="button">Back to projects</button></div></div>
 </dialog>
-<dialog id="case-4" aria-label="Kuensel case study">
-<div class="dialog-tools">
-<span>SELECTED WORK / 05</span>
-<button class="close" aria-label="Close case study">Close ✕</button>
-</div>
-<div class="asset-placeholder " data-asset="assets/kuensel.png" aria-hidden="true">
-</div>
-<div class="cs-header">
-<div class="cs-header-meta">
-<span class="cs-label">Case Study</span>
-<div class="cs-meta-row">
-<span class="cs-meta-item"
-                      >
-<i class="fas fa-user-pen">
-</i> UI/UX Designer</span
-                    >
-<span class="cs-meta-item"
-                      >
-<i class="fas fa-clock">
-</i> 4 Weeks</span
-                    >
-<span class="cs-meta-item"
-                      >
-<i class="fas fa-wrench">
-</i> Figma</span
-                    >
-</div>
-</div>
-<h2 id="csModalTitle5" class="cs-title">Kuensel</h2>
-<p class="cs-tagline">
-                  A clean digital news platform for browsing headlines, reading
-                  articles, and staying updated.
-                </p>
-</div>
-<div class="cs-body">
-<div class="cs-two-col">
-<div class="cs-card">
-<div class="cs-card-icon">
-<i class="fas fa-newspaper">
-</i>
-</div>
-<h3 class="cs-card-title">Project Overview</h3>
-<p>
-                      Kuensel is a digital news platform designed to deliver the
-                      latest news, stories, and updates from Bhutan and around
-                      the world. The platform provides users with reliable
-                      coverage on politics, business, culture, technology,
-                      sports, and community events through a clean, accessible,
-                      and user-friendly digital experience.
-                    </p>
-</div>
-<div class="cs-card">
-<div class="cs-card-icon">
-<i class="fas fa-triangle-exclamation">
-</i>
-</div>
-<h3 class="cs-card-title">Problem Statement</h3>
-<p>
-                      Many readers experience difficulty accessing news quickly
-                      due to cluttered layouts, overwhelming information, and
-                      poor mobile readability on traditional news platforms.
-                      Users also struggle to find relevant categories and
-                      breaking news efficiently.
-                    </p>
-</div>
-</div>
-<div class="cs-goal-banner">
-<div class="cs-goal-icon">
-<i class="fas fa-bullseye">
-</i>
-</div>
-<div>
-<h3>Goal</h3>
-<p>
-                      Design a modern and intuitive news platform that enables
-                      users to browse headlines easily, read articles
-                      comfortably, and stay updated with real-time news anytime
-                      and anywhere.
-                    </p>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span> Measurable Impact
-                  </h3>
-<div class="cs-metrics">
-<div class="cs-metric">
-<span class="cs-metric-num">46%</span>
-<span class="cs-metric-label"
-                        >Improvement in article readability during usability
-                        testing</span
-                      >
-</div>
-<div class="cs-metric">
-<span class="cs-metric-num">88%</span>
-<span class="cs-metric-label"
-                        >Users found news categories easier to navigate</span
-                      >
-</div>
-<div class="cs-metric">
-<span class="cs-metric-num">35%</span>
-<span class="cs-metric-label"
-                        >Faster access to breaking news through simplified
-                        homepage structure</span
-                      >
-</div>
-<div class="cs-metric">
-<span class="cs-metric-num">91%</span>
-<span class="cs-metric-label"
-                        >Positive feedback on mobile reading experience</span
-                      >
-</div>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span> UX Decision Rationale
-                  </h3>
-<div class="cs-rationale-grid">
-<div class="cs-rationale-item">
-<i class="fas fa-book-open-reader">
-</i
-                      >
-<span
-                        >Clean editorial layout improved readability and reduced
-                        information overload</span
-                      >
-</div>
-<div class="cs-rationale-item">
-<i class="fas fa-layer-group">
-</i
-                      >
-<span
-                        >Category-based navigation helped users access preferred
-                        news topics quickly</span
-                      >
-</div>
-<div class="cs-rationale-item">
-<i class="fas fa-mobile-screen-button">
-</i
-                      >
-<span
-                        >Mobile-first approach enhanced the reading experience
-                        on smartphones</span
-                      >
-</div>
-<div class="cs-rationale-item">
-<i class="fas fa-bolt">
-</i
-                      >
-<span
-                        >Highlighted breaking news section increased visibility
-                        of important updates</span
-                      >
-</div>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span> User Personas
-                  </h3>
-<div class="cs-two-col">
-<div class="cs-persona">
-<div class="cs-persona-header">
-<div class="cs-persona-avatar">DW</div>
-<div>
-<strong>Dechen Wangmo</strong>
-<span>31 · Office Employee · Thimphu</span>
-</div>
-</div>
-<p>
-<strong>Problem:</strong> Wants quick access to
-                        important national news during work breaks but finds
-                        many news sites visually cluttered and difficult to
-                        navigate.
-                      </p>
-<blockquote class="cs-quote">
-                        "As a working professional, I want to browse important
-                        headlines quickly, so I can stay informed without
-                        spending too much time searching for news."
-                      </blockquote>
-<div class="cs-persona-cols">
-<div>
-<p class="cs-mini-label">Goals</p>
-<ul class="cs-list">
-<li>Read important news efficiently</li>
-<li>Access trusted and updated information</li>
-</ul>
-</div>
-<div>
-<p class="cs-mini-label">Frustrations</p>
-<ul class="cs-list cs-list--red">
-<li>Overcrowded news interfaces</li>
-<li>Difficult mobile reading experience</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cs-persona">
-<div class="cs-persona-header">
-<div class="cs-persona-avatar">JD</div>
-<div>
-<strong>Jigme Dorji</strong>
-<span>21 · University Student · Punakha</span>
-</div>
-</div>
-<p>
-<strong>Problem:</strong> Wants to explore news related
-                        to technology, sports, and global events but struggles
-                        to discover relevant content easily.
-                      </p>
-<blockquote class="cs-quote">
-                        "As a student, I want to explore different news
-                        categories easily, so I can stay updated on topics that
-                        interest me most."
-                      </blockquote>
-<div class="cs-persona-cols">
-<div>
-<p class="cs-mini-label">Goals</p>
-<ul class="cs-list">
-<li>Browse multiple news categories</li>
-<li>Read articles comfortably on mobile</li>
-</ul>
-</div>
-<div>
-<p class="cs-mini-label">Frustrations</p>
-<ul class="cs-list cs-list--red">
-<li>Poor content organization</li>
-<li>Too many distractions and ads</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span> User Research Insights
-                  </h3>
-<div class="cs-two-col">
-<div>
-<p class="cs-mini-label" style="margin-bottom: 12px">
-                        Pain Points
-                      </p>
-<ul class="cs-list cs-list--red">
-<li>Cluttered and overwhelming layouts</li>
-<li>Poor mobile responsiveness</li>
-<li>Difficulty finding relevant news categories</li>
-<li>Lack of clear content hierarchy</li>
-</ul>
-</div>
-<div>
-<p class="cs-mini-label" style="margin-bottom: 12px">
-                        User Needs
-                      </p>
-<ul class="cs-list">
-<li>Easy navigation between categories</li>
-<li>Clear and readable article layouts</li>
-<li>Quick access to breaking news</li>
-<li>Smooth mobile reading experience</li>
-<li>Organized homepage structure</li>
-</ul>
-</div>
-</div>
-<div class="cs-methods">
-<p class="cs-mini-label" style="margin-bottom: 12px">
-                      Research Methods
-                    </p>
-<div class="cs-method-tags">
-<span>User Interviews (10 participants)</span>
-<span>Survey (45+ responses)</span>
-<span>Competitor Analysis</span>
-<span>Persona Creation</span>
-<span>Usability Testing</span>
-</div>
-</div>
-<div class="cs-insight-box">
-<i class="fas fa-lightbulb">
-</i>
-<p>
-<strong>Key Insight:</strong> Research showed that users
-                      value simplicity, readability, and accessibility when
-                      consuming digital news. A clean layout with organized
-                      categories significantly improved user engagement and
-                      reading comfort.
-                    </p>
-</div>
-<div class="cs-design-links">
-<div class="cs-design-card">
-<div>
-<h4>Wireframes (low-fidelity)</h4>
-<p>
-                          Low-fidelity wireframes explored homepage layouts,
-                          article pages, category navigation, and breaking news
-                          sections.
-                        </p>
-<a
-                          href="https://www.figma.com/design/3shYVEBVuL0D7VN0mRvcni/Kuensel?node-id=1-1809&p=f&t=bdA7CrAsbEKOA68x-0"
-                          target="_blank" rel="noopener noreferrer"
-                          class="cs-design-btn"
-                        >
-                          ↗ View lo-fi wireframes
-                        </a>
-</div>
-</div>
-<div class="cs-design-card">
-<div>
-<h4>High-fidelity designs</h4>
-<p>
-                          High-fidelity designs focused on clean typography,
-                          modern editorial layouts, balanced spacing, and
-                          responsive mobile experiences.
-                        </p>
-<a
-                          href="https://www.figma.com/design/3shYVEBVuL0D7VN0mRvcni/Kuensel?node-id=1-609&t=bdA7CrAsbEKOA68x-0"
-                          target="_blank" rel="noopener noreferrer"
-                          class="cs-design-btn"
-                        >
-                          ↗ View hi-fi designs
-                        </a>
-</div>
-</div>
-<div class="cs-design-card">
-<div>
-<h4>Prototype</h4>
-<p>
-                          Interactive prototype demonstrating the user flow from
-                          browsing headlines to reading articles and exploring
-                          different news categories.
-                        </p>
-<a
-                          href="https://www.figma.com/proto/3shYVEBVuL0D7VN0mRvcni/Kuensel?node-id=1-609&t=bdA7CrAsbEKOA68x-0&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1"
-                          target="_blank" rel="noopener noreferrer"
-                          class="cs-design-btn"
-                        >
-                          ▶ View interactive prototype
-                        </a>
-</div>
-</div>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span> Design Process
-                  </h3>
-<div class="cs-process-steps">
-<div class="cs-step">
-<div class="cs-step-num">01</div>
-<div class="cs-step-icon">
-<i class="fas fa-pencil-ruler">
-</i>
-</div>
-<h4>Wireframes</h4>
-<p>
-                        Explored homepage layouts, article pages, category
-                        navigation, and breaking news placement.
-                      </p>
-</div>
-<div class="cs-step-arrow">
-<i class="fas fa-chevron-right">
-</i>
-</div>
-<div class="cs-step">
-<div class="cs-step-num">02</div>
-<div class="cs-step-icon">
-<i class="fas fa-palette">
-</i>
-</div>
-<h4>High-Fidelity</h4>
-<p>
-                        Focused on clean typography, editorial layouts, balanced
-                        spacing, and mobile readability.
-                      </p>
-</div>
-<div class="cs-step-arrow">
-<i class="fas fa-chevron-right">
-</i>
-</div>
-<div class="cs-step">
-<div class="cs-step-num">03</div>
-<div class="cs-step-icon">
-<i class="fas fa-play-circle">
-</i>
-</div>
-<h4>Prototype</h4>
-<p>
-                        Demonstrated the flow from browsing headlines to reading
-                        articles and exploring categories.
-                      </p>
-</div>
-</div>
-</div>
-<div class="cs-section">
-<h3 class="cs-section-title">
-<span class="cs-section-dot">
-</span> Iterations &amp; Design
-                    Improvements
-                  </h3>
-<div class="cs-iterations">
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i
-                      >
-<span>Added featured breaking news section</span>
-</div>
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i
-                      >
-<span
-                        >Improved spacing between articles for readability</span
-                      >
-</div>
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i
-                      >
-<span>Simplified navigation menu structure</span>
-</div>
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i
-                      >
-<span>Added category quick-access cards</span>
-</div>
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i
-                      >
-<span
-                        >Enhanced mobile typography and responsiveness</span
-                      >
-</div>
-<div class="cs-iteration">
-<i class="fas fa-check-circle">
-</i
-                      >
-<span>Reduced visual clutter on homepage</span>
-</div>
-</div>
-</div>
-<div class="cs-reflection">
-<div class="cs-reflection-icon">
-<i class="fas fa-star">
-</i>
-</div>
-<div>
-<h3>Reflection</h3>
-<p>
-                      This project emphasized the importance of readability,
-                      accessibility, and information hierarchy in digital news
-                      platforms. Designing for both speed and clarity helped
-                      create a smoother reading experience while improving how
-                      users discover and consume news content.
-                    </p>
-</div>
-</div>
-<div class="cs-footer-btn">
-<button class="close" type="button">Back to projects</button>
-</div>
-</div>
+<dialog id="case-4" aria-labelledby="case-title-4">
+<div class="dialog-tools"><span>Project details</span><button class="close" type="button">Close</button></div>
+<div class="cs-header"><span class="cs-label">Case Study</span><p class="cs-meta-item">Frontend &amp; Smart Contract Developer &middot; August 2025</p><h2 class="cs-title" id="case-title-4">Bhutanese Museum NFT Marketplace (BMM)</h2><p class="cs-tagline">Ethereum NFT marketplace for Bhutanese cultural artifacts built with Solidity, ERC-721, React, and Ethers.js.</p></div>
+<div class="cs-body"><div class="cs-section"><h3 class="cs-section-title">Project Features</h3><p>Supports museum-controlled minting, MetaMask integration, ownership transfers, and automated 5% creator royalties.</p></div><div class="cs-footer-btn"><button class="close" type="button">Back to projects</button></div></div>
+</dialog>
+<dialog id="case-5" aria-labelledby="case-title-5">
+<div class="dialog-tools"><span>Project details</span><button class="close" type="button">Close</button></div>
+<div class="cs-header"><span class="cs-label">Case Study</span><p class="cs-meta-item">Documentation &amp; Frontend Developer &middot; August 2025</p><h2 class="cs-title" id="case-title-5">AuthenTQ</h2><p class="cs-tagline">Blockchain traceability system that uses smart contracts and NFT batch registration to verify Cordyceps authenticity.</p></div>
+<div class="cs-body"><div class="cs-section"><h3 class="cs-section-title">Project Features</h3><p>Supports QR code verification, manufacturer whitelisting, and on-chain ownership transfers from harvest to sale.</p></div><div class="cs-footer-btn"><button class="close" type="button">Back to projects</button></div></div>
 </dialog>
 </body>
 </html>

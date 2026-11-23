@@ -10,16 +10,16 @@ Add the images to `assets/` using these filenames. Each image replaces its own p
 
 | Upload | Filename |
 | --- | --- |
-| Home page portrait | `sonam-portrait.jpg` |
-| Show Me Your Agent Hackathon | `show-me-your-agent-hackathon.jpg` |
-| Blockchain Skills Bootcamp & Hackathon | `blockchain-bootcamp-hackathon.jpg` |
-| Best Project Award | `best-project-award.jpg` |
-| Aspire Institute Certificate of Completion | `aspire-institute.jpg` |
-| Bhutan Baccalaureate Diploma | `bhutan-baccalaureate.jpg` |
-| His Majesty the King's Certificate for Academic Excellence | `academic-excellence.jpg` |
+| Home page portrait cutout | `profile-cutout.png` |
+| Show Me Your Agent Hackathon | `ShowMeYourAgentHackathon.jpeg` |
+| Blockchain Skills Bootcamp & Hackathon | `BlockchainBootCampHackathon.jpeg` |
+| Best Project Award | `BestProject.jpeg` |
+| His Majesty the King's Certificate for Academic Excellence | `HMcertificate.jpeg` |
 
-For **PRF 2026 Moments**, add `prf-2026-01.jpg`, `prf-2026-02.jpg`, and `prf-2026-03.jpg` to `assets/`.
+**PRF 2026 Moments** uses `prf (2).jpeg`, `prf.jpeg`, `prf moments (3).jpeg`, `prf moments (5).jpeg`, `prf moments (6).jpeg` from `assets/`.
 
-For **Hackathon Moments**, add `hackathon-01.jpg`, `hackathon-02.jpg`, and `hackathon-03.jpg` to `assets/`.
+**Hackathon Moments** uses `hackathon.jpeg`, `hackathon.JPG`, `hackathon (2).jpeg`, `hackathon (2).JPG`, `hackathon (3).jpeg`, `hackathon (3).JPG`, `hackathon (4).jpeg`, `hackathon (4).JPG` from `assets/`.
 
-For project screenshots, add `onchain-wallet-profiler.jpg`, `blockbuild.jpg`, `tasksphere.jpg`, `transparent-charity.jpg`, `museum-nft-marketplace.jpg`, `authentq.jpg` to `assets/`.
+Project screenshots use `OnchainWalletProfiler.png`, `BlockBuild.png`, `Tasksphere.jpeg`, `charitydonationsystem.jpeg`, `MuseumArtifacts.jpeg`, `AuthenTQ.png` from `assets/`.
+
+The Aspire Institute and Bhutan Baccalaureate cards use PNG previews in `assets/` that link to the original PDFs.

@@ -146,12 +146,27 @@ document.querySelectorAll('[data-photo-slider]').forEach(gallery => {
   const slides = [...gallery.querySelectorAll('.moments-slide')];
   const controls = gallery.querySelector('.moments-controls');
   const position = gallery.querySelector('.moments-position');
+  const frame = gallery.querySelector('.moments-frame');
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  let timer;
   let selectedSlide;
+  let hasAdvanced = false;
+
+  function schedulePlayback() {
+    clearTimeout(timer);
+    if (reducedMotion.matches || controls.hidden) return;
+
+    timer = setTimeout(() => {
+      if (!document.hidden && !frame.matches(':hover, :focus')) showPhoto(1);
+      schedulePlayback();
+    }, 3000);
+  }
 
   function showPhoto(step = 0) {
     const available = slides.filter(slide => slide.querySelector('img'));
     if (!available.length) return;
-    const current = Math.max(0, available.indexOf(selectedSlide));
+    if (step !== 0) hasAdvanced = true;
+    const current = hasAdvanced ? Math.max(0, available.indexOf(selectedSlide)) : 0;
     const next = (current + step + available.length) % available.length;
     selectedSlide = available[next];
     slides.forEach(slide => { slide.hidden = slide !== selectedSlide; });
@@ -159,10 +174,11 @@ document.querySelectorAll('[data-photo-slider]').forEach(gallery => {
     position.textContent = (next + 1) + ' of ' + available.length;
   }
 
-  photoSliders.set(gallery, showPhoto);
-  gallery.querySelectorAll('[data-slide-step]').forEach(button => {
-    button.addEventListener('click', () => showPhoto(Number(button.dataset.slideStep)));
+  photoSliders.set(gallery, () => {
+    showPhoto();
+    schedulePlayback();
   });
+  reducedMotion.addEventListener('change', schedulePlayback);
 });
 
 document.querySelectorAll('[data-photo]').forEach(slot => {

@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08090b">
+<meta name="description" content="Six UX case studies from Sonam Deki's portfolio, with design rationale, project screenshots, and usability test plans.">
+<title>UX Case Studies | Sonam Deki</title>
+<script>
+try {
+  if (localStorage.getItem('portfolio-theme') === 'light') {
+    document.documentElement.dataset.theme = 'light';
+    document.querySelector('meta[name="theme-color"]').content = '#faf7ff';
+  }
+} catch {}
+</script>
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner wrap">
+    <a class="wordmark" href="index.html#home" aria-label="Sonam Deki home"><span class="brand-monogram" aria-hidden="true"></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">Menu <span aria-hidden="true">&#9776;</span></button>
+    <nav id="main-navigation" aria-label="Main navigation">
+      <a href="index.html#work">Portfolio projects</a>
+      <a href="#case-index" aria-current="location">Case studies</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Light mode" aria-pressed="false" title="Switch to light mode" hidden><svg class="theme-icon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.9 13.35A9 9 0 0 1 10.65 3.1 9 9 0 1 0 20.9 13.35Z"/></svg></button>
+  </div>
+</header>
+<main id="main" class="case-library wrap">
+  <header id="case-index" class="case-intro">
+    <h1 class="section-title">UX Case Studies</h1>
+    <p>Explore how six projects approach user tasks, from reading wallet activity to checking product provenance. Project screenshots document the available interfaces. The research, testing, and iteration sections describe proposed validation work.</p>
+    <nav aria-label="Choose a case study">
+      <ul class="case-links">
+        <li><a href="#wallet-profiler">Onchain Wallet Profiler</a></li>
+        <li><a href="#blockbuild">BlockBuild</a></li>
+        <li><a href="#tasksphere">TaskSphere</a></li>
+        <li><a href="#charity-donation">Transparent Charity Donation System</a></li>
+        <li><a href="#museum-marketplace">Bhutanese Museum NFT Marketplace</a></li>
+        <li><a href="#authentq">AuthenTQ</a></li>
+      </ul>
+    </nav>
+  </header>
+  <article class="case-study" aria-labelledby="wallet-profiler">
+    <header class="case-heading">
+      <p class="project-role">Documentation &amp; Quality Assurance · Ongoing</p>
+      <h2 id="wallet-profiler">Onchain Wallet Profiler</h2>
+      <p>Design focus · reading Ethereum wallet activity</p>
+    </header>
+    <nav aria-label="Onchain Wallet Profiler sections">
+      <ul class="case-links">
+        <li><a href="#wallet-profiler-problem">Problem and audience</a></li>
+        <li><a href="#wallet-profiler-research">Research questions</a></li>
+        <li><a href="#wallet-profiler-rationale">Ideation and design rationale</a></li>
+        <li><a href="#wallet-profiler-prototype">Prototype walkthrough</a></li>
+        <li><a href="#wallet-profiler-testing">Usability test plan</a></li>
+        <li><a href="#wallet-profiler-iteration">Proposed iteration</a></li>
+      </ul>
+    </nav>
+    <div class="case-body">
+      <section aria-labelledby="wallet-profiler-problem">
+        <h3 id="wallet-profiler-problem">Problem and audience</h3>
+        <p>Someone reviewing a wallet needs to understand its activity without manually reconstructing a transaction history. The primary question is whether a reviewer can trace a conclusion back to the transfers and protocol interactions that support it.</p>
+      </section>
+      <section aria-labelledby="wallet-profiler-research">
+        <h3 id="wallet-profiler-research">Research questions</h3>
+        <p>Ask reviewers to walk through a wallet they already understand, then note where they switch tools or lose context. Compare reviewers' interpretations of sparse histories and ambiguous counterparties.</p>
+      </section>
+      <section aria-labelledby="wallet-profiler-rationale">
+        <h3 id="wallet-profiler-rationale">Ideation and design rationale</h3>
+        <p>The project combines Nansen API data, visualizations, wallet behavior categories, and risk indicators. A summary gives reviewers a starting point and transaction detail lets them inspect the evidence. Any risk label needs a clear explanation of which signals contributed and where the data is incomplete.</p>
+      </section>
+      <section aria-labelledby="wallet-profiler-prototype">
+        <h3 id="wallet-profiler-prototype">Prototype walkthrough</h3>
+        <p>The proposed walkthrough follows one task through the project.</p>
+        <ol class="case-flow">
+          <li>Enter a wallet address</li>
+          <li>Scan its behavior summary</li>
+          <li>Follow a fund flow</li>
+          <li>Inspect the underlying transaction</li>
+        </ol>
+        <figure class="case-figure">
+          <img src="assets/OnchainWalletProfiler.png" width="1095" height="1117" alt="Onchain Wallet Profiler project interface" loading="lazy">
+          <figcaption>Onchain Wallet Profiler project screenshot</figcaption>
+        </figure>
+      </section>
+      <section aria-labelledby="wallet-profiler-testing">
+        <h3 id="wallet-profiler-testing">Usability test plan</h3>
+        <p>Ask reviewers to identify an outgoing transfer and explain why a risk indicator appeared. Record correct interpretations, time to locate evidence, and any confusion between limited data and low risk.</p>
+      </section>
+      <section aria-labelledby="wallet-profiler-iteration">
+        <h3 id="wallet-profiler-iteration">Proposed iteration</h3>
+        <p>If reviewers treat a risk label as definitive, add the contributing signals and data limitations beside it. Rerun the interpretation task with sparse and busy wallets.</p>
+      </section>
+    </div>
+    <footer class="case-footer">
+      <a href="index.html#project-title-0">Back to project card</a>
+      <a href="#case-index">All case studies</a>
+      <a href="#blockbuild">Next case study<span class="case-next-title">BlockBuild</span></a>
+    </footer>
+  </article>
+  <article class="case-study" aria-labelledby="blockbuild">
+    <header class="case-heading">
+      <p class="project-role">Documentation &amp; UI/UX Design · April 2026</p>
+      <h2 id="blockbuild">BlockBuild</h2>
+      <p>Design focus · making in-game ownership understandable</p>
+    </header>
+    <nav aria-label="BlockBuild sections">
+      <ul class="case-links">
+        <li><a href="#blockbuild-problem">Problem and audience</a></li>
+        <li><a href="#blockbuild-research">Research questions</a></li>
+        <li><a href="#blockbuild-rationale">Ideation and design rationale</a></li>
+        <li><a href="#blockbuild-prototype">Prototype walkthrough</a></li>
+        <li><a href="#blockbuild-testing">Usability test plan</a></li>
+        <li><a href="#blockbuild-iteration">Proposed iteration</a></li>
+      </ul>
+    </nav>
+    <div class="case-body">
+      <section aria-labelledby="blockbuild-problem">
+        <h3 id="blockbuild-problem">Problem and audience</h3>
+        <p>A player buying virtual land should know which parcel they selected, what they will spend, and when ownership will update.</p>
+      </section>
+      <section aria-labelledby="blockbuild-research">
+        <h3 id="blockbuild-research">Research questions</h3>
+        <p>Observe how first-time players read a land listing and ask them to predict what will happen after purchase. Include players with and without wallet experience.</p>
+      </section>
+      <section aria-labelledby="blockbuild-rationale">
+        <h3 id="blockbuild-rationale">Ideation and design rationale</h3>
+        <p>The game economy supports land purchases, ERC-1155 asset trading, player hiring, and ERC-20 rewards. For land purchases, a parcel-led review can put the map location, price, and balance together before wallet approval. This keeps the purchase anchored in the player's in-game goal.</p>
+      </section>
+      <section aria-labelledby="blockbuild-prototype">
+        <h3 id="blockbuild-prototype">Prototype walkthrough</h3>
+        <p>The proposed walkthrough follows one task through the project.</p>
+        <ol class="case-flow">
+          <li>Select a parcel</li>
+          <li>Review parcel and price</li>
+          <li>Approve in the wallet</li>
+          <li>Check purchase status and ownership</li>
+        </ol>
+        <figure class="case-figure">
+          <img src="assets/BlockBuild.png" width="2556" height="1224" alt="BlockBuild project interface" loading="lazy">
+          <figcaption>BlockBuild project screenshot</figcaption>
+        </figure>
+      </section>
+      <section aria-labelledby="blockbuild-testing">
+        <h3 id="blockbuild-testing">Usability test plan</h3>
+        <p>Give players a target parcel and a fixed budget. Record whether they choose the right parcel, state the cost, and recover after cancelling the wallet prompt.</p>
+      </section>
+      <section aria-labelledby="blockbuild-iteration">
+        <h3 id="blockbuild-iteration">Proposed iteration</h3>
+        <p>If players assume approval completes the purchase, make the pending confirmation state more prominent and show ownership only after confirmation. Repeat the task with a delayed transaction.</p>
+      </section>
+    </div>
+    <footer class="case-footer">
+      <a href="index.html#project-title-1">Back to project card</a>
+      <a href="#case-index">All case studies</a>
+      <a href="#tasksphere">Next case study<span class="case-next-title">TaskSphere</span></a>
+    </footer>
+  </article>
+  <article class="case-study" aria-labelledby="tasksphere">
+    <header class="case-heading">
+      <p class="project-role">Full-Stack Developer · March 2026</p>
+      <h2 id="tasksphere">TaskSphere</h2>
+      <p>Design focus · keeping task status and reminders clear</p>
+    </header>
+    <nav aria-label="TaskSphere sections">
+      <ul class="case-links">
+        <li><a href="#tasksphere-problem">Problem and audience</a></li>
+        <li><a href="#tasksphere-research">Research questions</a></li>
+        <li><a href="#tasksphere-rationale">Ideation and design rationale</a></li>
+        <li><a href="#tasksphere-prototype">Prototype walkthrough</a></li>
+        <li><a href="#tasksphere-testing">Usability test plan</a></li>
+        <li><a href="#tasksphere-iteration">Proposed iteration</a></li>
+      </ul>
+    </nav>
+    <div class="case-body">
+      <section aria-labelledby="tasksphere-problem">
+        <h3 id="tasksphere-problem">Problem and audience</h3>
+        <p>Task owners need to know whether a change saved and which reminders they enabled, especially when viewing the same task in more than one session.</p>
+      </section>
+      <section aria-labelledby="tasksphere-research">
+        <h3 id="tasksphere-research">Research questions</h3>
+        <p>Walk through a typical planning session with task owners. Ask when they expect a status change to appear and which events are worth an email or push notification.</p>
+      </section>
+      <section aria-labelledby="tasksphere-rationale">
+        <h3 id="tasksphere-rationale">Ideation and design rationale</h3>
+        <p>The app uses Server-Sent Events for live updates and supports configurable email and push notifications. Live updates keep the visible task state current, while notification preferences let users choose which changes deserve an interruption.</p>
+      </section>
+      <section aria-labelledby="tasksphere-prototype">
+        <h3 id="tasksphere-prototype">Prototype walkthrough</h3>
+        <p>The proposed walkthrough follows one task through the project.</p>
+        <ol class="case-flow">
+          <li>Create a task</li>
+          <li>Update its status</li>
+          <li>Confirm the change in a second session</li>
+          <li>Set a reminder channel</li>
+        </ol>
+        <figure class="case-figure">
+          <img src="assets/Tasksphere.jpeg" width="1600" height="860" alt="TaskSphere project interface" loading="lazy">
+          <figcaption>TaskSphere project screenshot</figcaption>
+        </figure>
+      </section>
+      <section aria-labelledby="tasksphere-testing">
+        <h3 id="tasksphere-testing">Usability test plan</h3>
+        <p>Ask users to update a task and enable only their preferred notification channel. Record task completion, mistaken channel selections, and how users interpret a delayed update after a reconnect.</p>
+      </section>
+      <section aria-labelledby="tasksphere-iteration">
+        <h3 id="tasksphere-iteration">Proposed iteration</h3>
+        <p>If users reopen tasks to check whether a change saved, prototype explicit saving and saved states near the edited field. Repeat the task with a slow connection and compare repeat actions.</p>
+      </section>
+    </div>
+    <footer class="case-footer">
+      <a href="index.html#project-title-2">Back to project card</a>
+      <a href="#case-index">All case studies</a>
+      <a href="#charity-donation">Next case study<span class="case-next-title">Transparent Charity Donation System</span></a>
+    </footer>
+  </article>
+  <article class="case-study" aria-labelledby="charity-donation">
+    <header class="case-heading">
+      <p class="project-role">Blockchain Developer · October 2025</p>
+      <h2 id="charity-donation">Transparent Charity Donation System</h2>
+      <p>Design focus · making donation progress traceable</p>
+    </header>
+    <nav aria-label="Transparent Charity Donation System sections">
+      <ul class="case-links">
+        <li><a href="#charity-donation-problem">Problem and audience</a></li>
+        <li><a href="#charity-donation-research">Research questions</a></li>
+        <li><a href="#charity-donation-rationale">Ideation and design rationale</a></li>
+        <li><a href="#charity-donation-prototype">Prototype walkthrough</a></li>
+        <li><a href="#charity-donation-testing">Usability test plan</a></li>
+        <li><a href="#charity-donation-iteration">Proposed iteration</a></li>
+      </ul>
+    </nav>
+    <div class="case-body">
+      <section aria-labelledby="charity-donation-problem">
+        <h3 id="charity-donation-problem">Problem and audience</h3>
+        <p>Donors need a clear view of where a contribution stands. Charities and auditors need enough detail to review the stages they are responsible for.</p>
+      </section>
+      <section aria-labelledby="charity-donation-research">
+        <h3 id="charity-donation-research">Research questions</h3>
+        <p>Walk donors, charity staff, and auditors through the same sample donation. Ask each group which milestones and record details they need to answer their everyday questions.</p>
+      </section>
+      <section aria-labelledby="charity-donation-rationale">
+        <h3 id="charity-donation-rationale">Ideation and design rationale</h3>
+        <p>The permissioned Hyperledger Fabric application tracks donations from submission to distribution and gives each role access to the relevant records. A shared sequence of milestones can give everyone the same vocabulary while supporting different levels of detail.</p>
+      </section>
+      <section aria-labelledby="charity-donation-prototype">
+        <h3 id="charity-donation-prototype">Prototype walkthrough</h3>
+        <p>The proposed walkthrough follows one task through the project.</p>
+        <ol class="case-flow">
+          <li>Submit a donation</li>
+          <li>Locate its record</li>
+          <li>Read the latest milestone</li>
+          <li>Open the details available to the current role</li>
+        </ol>
+        <figure class="case-figure">
+          <img src="assets/charitydonationsystem.jpeg" width="1600" height="859" alt="Transparent Charity Donation System project interface" loading="lazy">
+          <figcaption>Transparent Charity Donation System project screenshot</figcaption>
+        </figure>
+      </section>
+      <section aria-labelledby="charity-donation-testing">
+        <h3 id="charity-donation-testing">Usability test plan</h3>
+        <p>Ask a donor to distinguish a submitted donation from a distributed one and an auditor to locate its supporting record. Record stage interpretation errors and requests for help across the two roles.</p>
+      </section>
+      <section aria-labelledby="charity-donation-iteration">
+        <h3 id="charity-donation-iteration">Proposed iteration</h3>
+        <p>If the donor mistakes submission for delivery, pair each milestone with a plain-language explanation and show the next expected step. Repeat the task with a donation awaiting distribution.</p>
+      </section>
+    </div>
+    <footer class="case-footer">
+      <a href="index.html#project-title-3">Back to project card</a>
+      <a href="#case-index">All case studies</a>
+      <a href="#museum-marketplace">Next case study<span class="case-next-title">Bhutanese Museum NFT Marketplace</span></a>
+    </footer>
+  </article>
+  <article class="case-study" aria-labelledby="museum-marketplace">
+    <header class="case-heading">
+      <p class="project-role">Frontend &amp; Smart Contract Developer · August 2025</p>
+      <h2 id="museum-marketplace">Bhutanese Museum NFT Marketplace</h2>
+      <p>Design focus · placing cultural context alongside digital ownership</p>
+    </header>
+    <nav aria-label="Bhutanese Museum NFT Marketplace sections">
+      <ul class="case-links">
+        <li><a href="#museum-marketplace-problem">Problem and audience</a></li>
+        <li><a href="#museum-marketplace-research">Research questions</a></li>
+        <li><a href="#museum-marketplace-rationale">Ideation and design rationale</a></li>
+        <li><a href="#museum-marketplace-prototype">Prototype walkthrough</a></li>
+        <li><a href="#museum-marketplace-testing">Usability test plan</a></li>
+        <li><a href="#museum-marketplace-iteration">Proposed iteration</a></li>
+      </ul>
+    </nav>
+    <div class="case-body">
+      <section aria-labelledby="museum-marketplace-problem">
+        <h3 id="museum-marketplace-problem">Problem and audience</h3>
+        <p>A visitor should understand the cultural artifact and what the associated digital collectible represents before starting a wallet transaction.</p>
+      </section>
+      <section aria-labelledby="museum-marketplace-research">
+        <h3 id="museum-marketplace-research">Research questions</h3>
+        <p>Ask visitors and museum staff which artifact details should be visible while browsing and during purchase. Check how visitors describe what changes hands after a transfer.</p>
+      </section>
+      <section aria-labelledby="museum-marketplace-rationale">
+        <h3 id="museum-marketplace-rationale">Ideation and design rationale</h3>
+        <p>The museum controls minting, MetaMask supports ERC-721 transfers, and the smart contracts apply a 5% creator royalty. An artifact-first layout can establish context before purchase, while transaction review can make digital ownership and applicable fees clear at the point of decision.</p>
+      </section>
+      <section aria-labelledby="museum-marketplace-prototype">
+        <h3 id="museum-marketplace-prototype">Prototype walkthrough</h3>
+        <p>The proposed walkthrough follows one task through the project.</p>
+        <ol class="case-flow">
+          <li>Browse artifacts</li>
+          <li>Read the artifact record</li>
+          <li>Review the collectible and transfer details</li>
+          <li>Approve or cancel in the wallet</li>
+        </ol>
+        <figure class="case-figure">
+          <img src="assets/MuseumArtifacts.jpeg" width="1600" height="858" alt="Bhutanese Museum NFT Marketplace project interface" loading="lazy">
+          <figcaption>Bhutanese Museum NFT Marketplace project screenshot</figcaption>
+        </figure>
+      </section>
+      <section aria-labelledby="museum-marketplace-testing">
+        <h3 id="museum-marketplace-testing">Usability test plan</h3>
+        <p>Ask visitors to describe what they would own, find the royalty information, and return to the artifact after cancelling a wallet prompt. Record misunderstandings and recovery success.</p>
+      </section>
+      <section aria-labelledby="museum-marketplace-iteration">
+        <h3 id="museum-marketplace-iteration">Proposed iteration</h3>
+        <p>If visitors describe the purchase as ownership of the physical artifact, clarify what the token represents beside the purchase action and in the review step. Retest comprehension before opening the wallet.</p>
+      </section>
+    </div>
+    <footer class="case-footer">
+      <a href="index.html#project-title-4">Back to project card</a>
+      <a href="#case-index">All case studies</a>
+      <a href="#authentq">Next case study<span class="case-next-title">AuthenTQ</span></a>
+    </footer>
+  </article>
+  <article class="case-study" aria-labelledby="authentq">
+    <header class="case-heading">
+      <p class="project-role">Documentation &amp; Frontend Developer · August 2025</p>
+      <h2 id="authentq">AuthenTQ</h2>
+      <p>Design focus · making Cordyceps batch provenance easy to check</p>
+    </header>
+    <nav aria-label="AuthenTQ sections">
+      <ul class="case-links">
+        <li><a href="#authentq-problem">Problem and audience</a></li>
+        <li><a href="#authentq-research">Research questions</a></li>
+        <li><a href="#authentq-rationale">Ideation and design rationale</a></li>
+        <li><a href="#authentq-prototype">Prototype walkthrough</a></li>
+        <li><a href="#authentq-testing">Usability test plan</a></li>
+        <li><a href="#authentq-iteration">Proposed iteration</a></li>
+      </ul>
+    </nav>
+    <div class="case-body">
+      <section aria-labelledby="authentq-problem">
+        <h3 id="authentq-problem">Problem and audience</h3>
+        <p>A buyer scanning a package needs to tell whether it has a matching batch record and understand which handoffs were recorded.</p>
+      </section>
+      <section aria-labelledby="authentq-research">
+        <h3 id="authentq-research">Research questions</h3>
+        <p>Observe buyers scanning a code on a phone and ask which details they compare with the package. Ask approved manufacturers how they identify a batch before registering it or recording a transfer.</p>
+      </section>
+      <section aria-labelledby="authentq-rationale">
+        <h3 id="authentq-rationale">Ideation and design rationale</h3>
+        <p>Approved manufacturers register batches, smart contracts record ownership transfers, and QR codes provide a shortcut to verification. Showing the matching batch identity before the transfer history supports a quick check. The verification result should also explain what the recorded history can establish.</p>
+      </section>
+      <section aria-labelledby="authentq-prototype">
+        <h3 id="authentq-prototype">Prototype walkthrough</h3>
+        <p>The proposed walkthrough follows one task through the project.</p>
+        <ol class="case-flow">
+          <li>Scan a package code</li>
+          <li>Compare the batch identifier</li>
+          <li>Review recorded handoffs</li>
+          <li>Check what the result means</li>
+        </ol>
+        <figure class="case-figure">
+          <img src="assets/AuthenTQ.png" width="2182" height="1128" alt="AuthenTQ project interface" loading="lazy">
+          <figcaption>AuthenTQ project screenshot</figcaption>
+        </figure>
+      </section>
+      <section aria-labelledby="authentq-testing">
+        <h3 id="authentq-testing">Usability test plan</h3>
+        <p>Ask buyers to evaluate a matching batch, an unknown code, and a record with incomplete transfer history. Record correct interpretations, time to match the identifier, and whether users overstate what a match proves.</p>
+      </section>
+      <section aria-labelledby="authentq-iteration">
+        <h3 id="authentq-iteration">Proposed iteration</h3>
+        <p>If users interpret a batch match as a guarantee about the package contents, explain the scope of verification beside the result. Retest with matching and unknown codes on a phone.</p>
+      </section>
+    </div>
+    <footer class="case-footer">
+      <a href="index.html#project-title-5">Back to project card</a>
+      <a href="#case-index">All case studies</a>
+    </footer>
+  </article>
+</main>
+<footer class="wrap"><p>Sonam Deki</p></footer>
+</body>
+</html>

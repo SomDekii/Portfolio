@@ -1,4 +1,4 @@
-﻿const menuButton = document.querySelector('.menu-toggle');
+const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.getElementById('main-navigation');
 function closeMenu() {
   menuButton.setAttribute('aria-expanded', 'false');
@@ -17,27 +17,6 @@ document.addEventListener('keydown', event => {
   }
 });
 matchMedia('(min-width: 851px)').addEventListener('change', closeMenu);
-
-let lastTrigger;
-document.querySelectorAll('[data-case]').forEach(button => button.addEventListener('click', () => {
-  const dialog = document.getElementById('case-' + button.dataset.case);
-  lastTrigger = button;
-  dialog.showModal();
-  dialog.scrollTop = 0;
-  document.body.classList.add('modal-open');
-}));
-document.querySelectorAll('dialog').forEach(dialog => {
-  dialog.querySelectorAll('.close').forEach(button => button.addEventListener('click', () => dialog.close()));
-  dialog.addEventListener('click', event => {
-    if (event.target !== dialog) return;
-    const rect = dialog.getBoundingClientRect();
-    if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
-  });
-  dialog.addEventListener('close', () => {
-    document.body.classList.remove('modal-open');
-    lastTrigger?.focus();
-  });
-});
 
 // Use section positions so Home/About do not depend on observer callback order.
 const sectionLinks = [...navigation.querySelectorAll('a[href^="#"]')];
@@ -126,7 +105,7 @@ window.addEventListener('load', updateHeaderOffset);
 updateHeaderOffset();
 
 const contactForm = document.getElementById('contact-form');
-contactForm.addEventListener('submit', event => {
+contactForm?.addEventListener('submit', event => {
   event.preventDefault();
   const recipient = contactForm.dataset.email;
   if (!recipient) {
